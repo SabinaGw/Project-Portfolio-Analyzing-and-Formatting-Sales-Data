@@ -1,16 +1,16 @@
-#### Project-Portfolio-Analyzing-and-Formatting-Superstore-Sales-Data
+# Project-Portfolio-Analyzing-and-Formatting-Superstore-Sales-Data
 
 ## Project Description
 This project involves reformatting and analyzing Superstore sales data to answer critical business questions while addressing issues such as incorrect data types and missing values. The primary goal is to extract actionable insights that can inform business strategies and enhance overall performance.
 
 The analysis will utilize a combination of Excel, SQL, and PowerBI, following a structured approach to ensure comprehensive and reliable results. The process will encompass six key parts of data analysis:
 
-# 1.Defining the Problems
-# 2.Data Preparation
-# 3.Data Cleaning and Processing
-# 4.Data Analysis
-# 5.Data Visualization
-# 6.Recommendations
+### 1.Defining the Problems
+### 2.Data Preparation
+### 3.Data Cleaning and Processing
+### 4.Data Analysis
+### 5.Data Visualization
+### 6.Recommendations
 
 ## Steps to Accomplish the Superstore Data Analysis Project
 
@@ -19,35 +19,29 @@ Which products, locations, and customer segments should the company focus on and
 What trends are emerging and what recommendations can be made based on the analysis findings?
 
 ## 2. Data Preparation
-# Data:
-Datacamp.com: Superstore
-Includes two tables: orders and products
-Orders table contains 50,906 rows and 22 columns, covering orders from 2011-2014
-Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
+### Data:
+* Datacamp.com: Superstore
+* Includes two tables: orders and products
+* Orders table contains 50,906 rows and 22 columns, covering orders from 2011-2014
+* Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
-3. Data Cleaning and Processing
-Methods:
+## 3. Data Cleaning and Processing
+### Methods:
+* Observation of data in Excel
+* Checking for missing data using filters and conditional formatting
+* Removing duplicates
+* Formatting columns (dates, numbers, currency)
+* Filling in missing data in MySQL
 
-Observation of data in Excel
+## 4. Data Analysis
+### Methods: SQL for exploratory data analysis
 
-Checking for missing data using filters and conditional formatting
+### Main Questions:
 
-Removing duplicates
+## Total Sales and Profits:
 
-Formatting columns (dates, numbers, currency)
-
-Filling in missing data in MySQL
-
-4. Data Analysis
-Methods: SQL for exploratory data analysis
-
-Main Questions:
-
-Total Sales and Profits:
-
-Total sales and profits per year
-
-Total sales and profits per quarter
+1. Total sales and profits per year
+2. Total sales and profits per quarter
 
 Geographic Analysis:
 
