@@ -42,68 +42,50 @@ What trends are emerging and what recommendations can be made based on the analy
 1. Total sales and profits per year
 2. Total sales and profits per quarter
 
-Geographic Analysis:
+## Geographic Analysis:
 
-Highest sales and profits by region
+3. Highest sales and profits by region
+4. Highest sales and profits by state and city
+   
+## Product Analysis:
 
-Highest sales and profits by state and city
+5. Most profitable categories and subcategories
+6. Most profitable products
+7. Gross margin analysis: calculating gross margin for different product categories
+8. Price variability analysis: how price variability affects sales and profits
 
-Geographic analysis: differences in delivery time based on location
+## Customer Analysis:
 
-Product Analysis:
+9. Customer segments
+10. Total number of customers
+11. Customer retention analysis: repeat purchases and retention rates. Loyalty program
 
-Most profitable categories and subcategories
+## Sales Analysis:
 
-Most profitable products
+12. Relationship between discounts and sales
+13. Basket analysis: average order value and number of products per order
 
-Gross margin analysis: calculating gross margin for different product categories
+## Delivery Time Analysis:
 
-Price variability analysis: how price variability affects sales and profits
+14. Delivery time of products (quantity and %)
+15. Average delivery time
+16. Differences in delivery time based on location
+17. Deviation analysis
+18. Type of products vs. delivery time
 
-Customer Analysis:
-
-Customer segments
-
-Total number of customers
-
-Customer retention analysis: repeat purchases and retention rates. Loyalty program
-
-Sales Analysis:
-
-Relationship between discounts and sales
-
-Basket analysis: average order value and number of products per order
-
-Delivery Time Analysis:
-
-Delivery time of products (quantity and %)
-
-Average delivery time
-
-Deviation analysis
-
-Seasonal trends analysis
-
-Type of products vs. delivery time
-
-5. Data Visualization
-Tool: PowerBI
+## 5. Data Visualization
+### Tool: PowerBI
 
 Interactive dashboard in PowerBI based on collected data
 
-6. Recommendations
-Findings and Recommendations:
+## 6. Recommendations
 
-Profits and sales are gradually improving, with Q4 being a key period
+### Findings and Recommendations:
 
-Best performing regions are West and East; focus should be on these regions
-
-California, New York, and Washington are the most profitable states, while Texas, Ohio, and Pennsylvania incur losses
-
-Technology and Office Supplies are the best categories, while Furniture needs improvement
-
-Among subcategories, Copiers and Paper yield the highest profits, while Tables and Bookcases yield the highest losses
-
-Consumer segment yields the highest profits
-
-Loyalty program should reward the most loyal customers, even if they incur losses
+* Profits and sales are gradually improving, with Q4 being a key period
+* Best performing regions are West and East; focus should be on these regions
+* California, New York, and Washington are the most profitable states, while Texas, Ohio, and Pennsylvania incur losses
+* Technology and Office Supplies are the best categories, while Furniture needs improvement
+* Among subcategories, Copiers and Paper yield the highest profits, while Tables and Bookcases yield the highest losses
+* Consumer segment yields the highest profits
+* Loyalty program should reward the most loyal customers, even if they incur losses
