@@ -117,11 +117,49 @@ ORDER BY revenue_year DESC, revenue_quarter DESC;
 
 #### Geographic Analysis:
 3. Highest sales and profits by region
-4. Highest sales and profits by state and city
+
+```sql
+SELECT 
+region, 
+ROUND(SUM(sales-discount),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit,
+ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
+FROM orders
+GROUP BY region
+ORDER BY total_sales DESC;
+```
+5. Sales and profits by state and city
+
+```sql
+-- Top 10 Cities by Profit
+SELECT 
+state, 
+city,
+ROUND(SUM(sales-discount),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit,
+ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
+FROM orders
+GROUP BY state, city
+ORDER BY total_profit DESC
+LIMIT 10;
+-- Bottom 10 Cities by Profit
+SELECT 
+state, 
+city,
+ROUND(SUM(sales-discount),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit,
+ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
+FROM orders
+GROUP BY state, city
+ORDER BY total_profit ASC
+LIMIT 10;
+```
    
 #### Product Analysis:
 5. Most profitable categories and subcategories
+   
 6. Most profitable products
+
 7. Gross margin analysis: calculating gross margin for different product categories
 8. Price variability analysis: how price variability affects sales and profits
 
