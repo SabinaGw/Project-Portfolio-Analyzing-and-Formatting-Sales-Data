@@ -31,8 +31,7 @@ What trends are emerging and what recommendations can be made based on the analy
 * Formatting columns (dates, numbers, currency)
 * Filling in missing data in MySQL
 
-  ```sql
-CREATE TEMPORARY TABLE calculated_quantities AS
+  ```sql CREATE TEMPORARY TABLE calculated_quantities AS
 WITH missing_values AS (
   SELECT product_id, 
          discount, 
