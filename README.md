@@ -90,7 +90,7 @@ WHERE orders.quantity IS NULL;
    
 ```sql
  SELECT 
-    year(order_date) AS total_year, 
+    YEAR(order_date) AS total_year, 
     ROUND(SUM(sales - discount), 2) AS total_revenue, 
     ROUND(SUM(profit), 2) AS total_profit
   FROM orders
@@ -101,6 +101,18 @@ WHERE orders.quantity IS NULL;
 ![Wyniki zapytania SQL](./images/1.jpg)
 
 2. Total sales and profits per quarter
+
+```sql
+SELECT 
+    YEAR(o.order_date) AS revenue_year,
+    QUARTER(o.order_date) AS revenue_quarter,
+    ROUND(SUM((o.sales - o.discount)), 2) AS order_total 
+FROM orders AS o
+LEFT JOIN products AS p
+ON o.product_id = p.product_id
+GROUP BY revenue_year, revenue_quarter
+ORDER BY revenue_year DESC, revenue_quarter DESC;
+```
 
 #### Geographic Analysis:
 3. Highest sales and profits by region
