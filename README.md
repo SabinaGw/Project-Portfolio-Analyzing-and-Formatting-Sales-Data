@@ -5,7 +5,7 @@ This project involves reformatting and analyzing Superstore sales data to answer
 
 The analysis will utilize a combination of Excel, SQL, and PowerBI, following a structured approach to ensure comprehensive and reliable results. The process will encompass six key parts of data analysis:
 
-*[1.Defining the Problems](#defining-the-problems)
+* [1.Defining the Problems](#defining-the-problems)
 ### 2.Data Preparation
 ### 3.Data Cleaning and Processing
 ### 4.Data Analysis
