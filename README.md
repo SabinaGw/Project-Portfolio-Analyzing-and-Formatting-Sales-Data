@@ -87,6 +87,17 @@ WHERE orders.quantity IS NULL;
 
 #### Total Sales and Profits:
 1. Total sales and profits per year
+   
+```sql
+ SELECT 
+    year(order_date) AS total_year, 
+    ROUND(SUM(sales - discount), 2) AS total_revenue, 
+    ROUND(SUM(profit), 2) AS total_profit
+  FROM orders
+  GROUP BY  total_year
+  ORDER BY total_year DESC;
+```
+   
 2. Total sales and profits per quarter
 
 #### Geographic Analysis:
