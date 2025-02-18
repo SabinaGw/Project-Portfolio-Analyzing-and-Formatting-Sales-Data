@@ -67,13 +67,12 @@ What trends are emerging and what recommendations can be made based on the analy
 18. Type of products vs. delivery time
 
 ## 5. Data Visualization
-### Tool: PowerBI
-
+#### Tool: PowerBI
 Interactive dashboard in PowerBI based on collected data
 
 ## 6. Recommendations
 
-### Findings and Recommendations:
+#### Findings and Recommendations:
 
 * Profits and sales are gradually improving, with Q4 being a key period
 * Best performing regions are West and East; focus should be on these regions
