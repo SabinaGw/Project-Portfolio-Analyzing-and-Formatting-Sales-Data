@@ -14,7 +14,7 @@ The analysis will utilize a combination of Excel, SQL, and PowerBI, following a 
 
   
 ## 1. Defining the Problems
-Which products, locations, and customer segments should the company focus on and which should it avoid to maximize profits?
+#### Which products, locations, and customer segments should the company focus on and which should it avoid to maximize profits?
 What trends are emerging and what recommendations can be made based on the analysis findings?
 
 ## 2. Data Preparation
