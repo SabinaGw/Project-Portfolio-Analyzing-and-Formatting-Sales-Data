@@ -8,8 +8,8 @@ The analysis will utilize a combination of Excel, SQL, and PowerBI, following a 
 * [Defining the Problems](#1-defining-the-problems)
 * [Data Preparation](#2-data-preparation)
 * [Data Cleaning and Processing](#3-data-cleaning-and-processing)
-* [Data Analysis](#4-data-analysis)
-                - Total Sales and Profits, Geographic Analysis, Product Analysis, Customer Analysis, Sales Analysis, Delivery Time Analysis
+* [Data Analysis](#4-data-analysis) 
+   - Analyzing sales, profits, geographic trends, product performance, customer behavior, and delivery times.
 * [Data Visualization](#5-data-visualization)
 * [Recommendations](#6-recommendations)
 
