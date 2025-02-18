@@ -74,7 +74,7 @@ ON orders.product_id = calculated_quantities.product_id
 AND orders.discount = calculated_quantities.discount
 AND orders.sales = calculated_quantities.sales
 SET orders.quantity = calculated_quantities.calculated_quantity
-WHERE orders.quantity IS NULL;
+WHERE orders.quantity IS NULL; ```
 
 ## 4. Data Analysis
 #### Methods: SQL for exploratory data analysis
