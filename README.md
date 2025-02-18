@@ -18,9 +18,8 @@ Which products, locations, and customer segments should the company focus on and
 What trends are emerging and what recommendations can be made based on the analysis findings?
 
 ## 2. Data Preparation
-### Data:
-* Datacamp.com: Superstore
-* Includes two tables: orders and products
+* Data source: Datacamp.com 
+* Superstore data includes two tables: orders and products
 * Orders table contains 50,906 rows and 22 columns, covering orders from 2011-2014
 * Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
@@ -37,30 +36,30 @@ What trends are emerging and what recommendations can be made based on the analy
 
 ### Main Questions:
 
-### Total Sales and Profits:
+#### Total Sales and Profits:
 1. Total sales and profits per year
 2. Total sales and profits per quarter
 
-### Geographic Analysis:
+#### Geographic Analysis:
 3. Highest sales and profits by region
 4. Highest sales and profits by state and city
    
-### Product Analysis:
+#### Product Analysis:
 5. Most profitable categories and subcategories
 6. Most profitable products
 7. Gross margin analysis: calculating gross margin for different product categories
 8. Price variability analysis: how price variability affects sales and profits
 
-### Customer Analysis:
+#### Customer Analysis:
 9. Customer segments
 10. Total number of customers
 11. Customer retention analysis: repeat purchases and retention rates. Loyalty program
 
-### Sales Analysis:
+#### Sales Analysis:
 12. Relationship between discounts and sales
 13. Basket analysis: average order value and number of products per order
 
-### Delivery Time Analysis:
+#### Delivery Time Analysis:
 14. Delivery time of products (quantity and %)
 15. Average delivery time
 16. Differences in delivery time based on location
