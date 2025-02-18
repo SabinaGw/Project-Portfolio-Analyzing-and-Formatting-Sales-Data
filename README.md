@@ -24,7 +24,7 @@ What trends are emerging and what recommendations can be made based on the analy
 * Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
 ## 3. Data Cleaning and Processing
-#### Methods:
+#### Tools: Excel, MySQL
 * Observation of data in Excel
 * Checking for missing data using filters and conditional formatting
 * Removing duplicates
