@@ -40,8 +40,43 @@ WITH missing_values AS (
          sales
   FROM orders 
   WHERE quantity IS NULL   -- Finding data with NULL quantity
+),
+unite_price AS (
+  SELECT 
+    o.product_id,
+    o.discount, 
+    o.market, 
+    o.region, 
+    o.sales, 
+    o.quantity, 
+    o.sales / o.quantity AS unite_price 
+  FROM orders AS o
+  RIGHT JOIN missing_values AS m 
+  ON o.product_id = m.product_id 
+  AND o.discount = m.discount 
+  WHERE o.quantity IS NOT NULL  -- Finding data with not NULL quantity
+)
+SELECT 
+  m.product_id, 
+  m.discount, 
+  m.region,
+  m.sales, 
+  ROUND((m.sales/u.unite_price), 0) AS calculated_quantity   -- Calculating quantity
+FROM missing_values AS m 
+INNER JOIN unite_price AS u 
+ON m.product_id = u.product_id 
+AND m.discount = u.discount;
 ```
 
+```sql
+UPDATE orders
+JOIN calculated_quantities
+ON orders.product_id = calculated_quantities.product_id
+AND orders.discount = calculated_quantities.discount
+AND orders.sales = calculated_quantities.sales
+SET orders.quantity = calculated_quantities.calculated_quantity
+WHERE orders.quantity IS NULL;
+```
 
 ## 4. Data Analysis
 #### Methods: SQL for exploratory data analysis
