@@ -98,6 +98,8 @@ WHERE orders.quantity IS NULL;
   ORDER BY total_year DESC;
 ```
 
+![Wyniki zapytania SQL](./images/1.jpg)
+
 2. Total sales and profits per quarter
 
 #### Geographic Analysis:
