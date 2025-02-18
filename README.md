@@ -5,14 +5,12 @@ This project involves reformatting and analyzing Superstore sales data to answer
 
 The analysis will utilize a combination of Excel, SQL, and PowerBI, following a structured approach to ensure comprehensive and reliable results. The process will encompass six key parts of data analysis:
 
-* [Defining the Problems](#defining-the-problems)
-* [Data Preparation](#data-preparation)
-* [Data Cleaning and Processing](#data-cleaning-and-processing)
-* [Data Analysis](#data-analysis)
-* [Data Visualization](#data-visualization)
-* [Recommendations](#recommendations)
-
-## Steps to Accomplish the Superstore Data Analysis Project
+* [Defining the Problems](#1.-defining-the-problems)
+* [Data Preparation](#2.-data-preparation)
+* [Data Cleaning and Processing](#3.-data-cleaning-and-processing)
+* [Data Analysis](#4.-data-analysis)
+* [Data Visualization](#5.-data-visualization)
+* [Recommendations](#6.-recommendations)
 
 ## 1. Defining the Problems
 Which products, locations, and customer segments should the company focus on and which should it avoid to maximize profits?
