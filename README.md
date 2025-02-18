@@ -32,6 +32,7 @@ What trends are emerging and what recommendations can be made based on the analy
 * Filling in missing data in MySQL
 
 ```sql
+-- Filling in missing quantity data
 CREATE TEMPORARY TABLE calculated_quantities AS
 WITH missing_values AS (
   SELECT product_id, 
@@ -39,9 +40,9 @@ WITH missing_values AS (
          region,
          sales
   FROM orders 
-  WHERE quantity IS NULL   -- Finding data with NULL quantity
+  WHERE quantity IS NULL  -- Find rows with NULL quantity
 ),
-unite_price AS (
+unit_price AS (
   SELECT 
     o.product_id,
     o.discount, 
@@ -49,26 +50,27 @@ unite_price AS (
     o.region, 
     o.sales, 
     o.quantity, 
-    o.sales / o.quantity AS unite_price 
+    o.sales / o.quantity AS unit_price 
   FROM orders AS o
   RIGHT JOIN missing_values AS m 
   ON o.product_id = m.product_id 
   AND o.discount = m.discount 
-  WHERE o.quantity IS NOT NULL  -- Finding data with not NULL quantity
+  WHERE o.quantity IS NOT NULL  -- Find rows with non-NULL quantity
 )
 SELECT 
   m.product_id, 
   m.discount, 
   m.region,
   m.sales, 
-  ROUND((m.sales/u.unite_price), 0) AS calculated_quantity   -- Calculating quantity
+  ROUND((m.sales/u.unit_price), 0) AS calculated_quantity  -- Calculate missing quantity
 FROM missing_values AS m 
-INNER JOIN unite_price AS u 
+INNER JOIN unit_price AS u 
 ON m.product_id = u.product_id 
 AND m.discount = u.discount;
 ```
 
 ```sql
+-- Update table with calculated quantities
 UPDATE orders
 JOIN calculated_quantities
 ON orders.product_id = calculated_quantities.product_id
