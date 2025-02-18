@@ -31,7 +31,8 @@ What trends are emerging and what recommendations can be made based on the analy
 * Formatting columns (dates, numbers, currency)
 * Filling in missing data in MySQL
 
-  ```sql CREATE TEMPORARY TABLE calculated_quantities AS
+  ```sql
+CREATE TEMPORARY TABLE calculated_quantities AS
 WITH missing_values AS (
   SELECT product_id, 
          discount, 
@@ -65,16 +66,15 @@ FROM missing_values AS m
 INNER JOIN unite_price AS u 
 ON m.product_id = u.product_id 
 AND m.discount = u.discount;
-
 -- Updating table with calculated quantity 
-
 UPDATE orders
 JOIN calculated_quantities
 ON orders.product_id = calculated_quantities.product_id
 AND orders.discount = calculated_quantities.discount
 AND orders.sales = calculated_quantities.sales
 SET orders.quantity = calculated_quantities.calculated_quantity
-WHERE orders.quantity IS NULL; ```
+WHERE orders.quantity IS NULL; 
+```
 
 ## 4. Data Analysis
 #### Methods: SQL for exploratory data analysis
