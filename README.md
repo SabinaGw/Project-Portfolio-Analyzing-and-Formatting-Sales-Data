@@ -97,7 +97,7 @@ WHERE orders.quantity IS NULL;
   GROUP BY  total_year
   ORDER BY total_year DESC;
 ```
-   
+
 2. Total sales and profits per quarter
 
 #### Geographic Analysis:
