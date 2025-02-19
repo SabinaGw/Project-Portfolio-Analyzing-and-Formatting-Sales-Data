@@ -235,16 +235,49 @@ LIMIT 10;
 SELECT 
 state, 
 city,
-ROUND(SUM(sales-discount),2) AS total_sales,
+ROUND(SUM(sales),2) AS total_sales,
 ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
+ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
 FROM orders
 GROUP BY state, city
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
 
+### 5. What is the relationship between discount and sales, and what is the total discount per category?
 
+
+-- Discount vs Avg Sales
+```sql
+SELECT 
+discount, 
+ROUND(AVG(sales),2) AS Avg_Sales
+FROM orders
+GROUP BY discount
+ORDER BY discount;
+```
+
+-- Most discounted categories
+```sql
+SELECT p.category, 
+SUM(o. discount) AS total_discount
+FROM orders AS o 
+LEFT JOIN products AS p
+ON o.product_id = p.product_id
+GROUP BY category
+ORDER BY total_discount DESC;
+```
+
+-- Most discounted subcategories
+```sql
+SELECT p.sub_category, p.category,
+SUM(o. discount) AS total_discount
+FROM orders AS o 
+LEFT JOIN products AS p
+ON o.product_id = p.product_id
+GROUP BY sub_category, p.category
+ORDER BY total_discount DESC;
+```
 
 5. Sales and profits by state and city
 
