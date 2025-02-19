@@ -95,19 +95,19 @@ WHERE orders.quantity IS NULL;
 
 [5. What is the relationship between discount and sales, and what is the total discount per category?](#5-What-is-the-relationship-between-discount-and-sales-and-what-is-the-total-discount-per-category)
 
-[6. Which category generates the highest sales and profits in each region and country?](#6-Which-category-generates-the-highest-sales-and-profits-in-each-region-and-country?)
+[6. Which category generates the highest sales and profits in each region and country?](#6-Which-category-generates-the-highest-sales-and-profits-in-each-region-and-country)
 
-[7. Which subcategory generates the highest sales and profits in each region and country?](#7-Which-subcategory-generates-the-highest-sales-and-profits-in-each-region-and-country?)
+[7. Which subcategory generates the highest sales and profits in each region and country?](#7-Which-subcategory-generates-the-highest-sales-and-profits-in-each-region-and-country)
 
-[8. What are the names of the most and least profitable products?](#8-What-are-the-names-of-the-most-and-least-profitable-products?)
+[8. What are the names of the most and least profitable products?](#8-What-are-the-names-of-the-most-and-least-profitable-products)
 
-[9. Which segment contributes the most to our profits and sales?](#9-Which-segment-contributes-the-most-to-our-profits-and-sales?)
+[9. Which segment contributes the most to our profits and sales?](#9-Which-segment-contributes-the-most-to-our-profits-and-sales)
 
-[10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country?)
+[10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country)
 
-[11. Which customers bring the most profit? ](#11-Which-customers-bring-the-most-profit?)
+[11. Which customers bring the most profit? ](#11-Which-customers-bring-the-most-profit)
 
-[12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total?)
+[12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total)
 
 ### 1. What are the total sales and total profits for each year?
 Total sales and profits per year
@@ -164,7 +164,8 @@ ORDER BY revenue_quarter DESC;
 ```
 
 #### 3. Which region generates the highest sales and profits?
-3. Highest sales and profits by region
+
+Total sales, profits, and profit margins by region
 
 ```sql
 SELECT 
@@ -176,6 +177,19 @@ FROM orders
 GROUP BY region
 ORDER BY total_sales DESC;
 ```
+Average Order Value (AOV) and Average Number of Products per Order by region
+
+```sql
+SELECT
+region,
+  ROUND(SUM(sales) / COUNT(DISTINCT order_id), 2) AS average_order_value,
+  ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) AS average_products_per_order
+FROM orders
+GROUP BY region
+ORDER BY  average_order_value DESC;
+```
+
+
 5. Sales and profits by state and city
 
 ```sql
