@@ -85,7 +85,7 @@ WHERE orders.quantity IS NULL;
 
 ### Main Questions:
 
-[1. What are the total sales and total profits for each year?](#1-What-are-the-total-sales-and-total-profits-for-each-year?)
+[1. What are the total sales and total profits for each year?](#1-What-are-the-total-sales-and-total-profits-for-each-year)
 
 [2. What are the total sales and total profits per quarter?](#2-What-are-the-total-sales-and-total-profits-per-quarter?)
 
@@ -124,7 +124,7 @@ Total sales and profits per year
 
 ![Wyniki zapytania SQL](./images/1.jpg)
 
-#### 2. What are the total sales and total profits per quarter?
+### 2. What are the total sales and total profits per quarter?
 Total sales and profits per quarter
 
 ```sql
