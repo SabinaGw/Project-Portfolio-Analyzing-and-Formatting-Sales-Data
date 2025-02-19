@@ -109,7 +109,7 @@ WHERE orders.quantity IS NULL;
 
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total?)
 
-#### 1. What are the total sales and total profits for each year?
+### 1. What are the total sales and total profits for each year?
 Total sales and profits per year
    
 ```sql
@@ -138,6 +138,29 @@ GROUP BY revenue_year, revenue_quarter
 ORDER BY revenue_year DESC, revenue_quarter DESC;
 ```
 Best performing quarters from 2011-2014
+
+```sql
+WITH cte AS (
+  SELECT 
+    QUARTER(o.order_date) AS revenue_quarter,
+    ROUND(SUM(o.sales), 2) AS order_total 
+  FROM orders AS o
+  LEFT JOIN products AS p
+  ON o.product_id = p.product_id
+  GROUP BY revenue_quarter
+  ORDER BY revenue_quarter DESC
+)
+SELECT 
+  CASE 
+    WHEN revenue_quarter = 1 THEN 'Q1'
+    WHEN revenue_quarter = 2 THEN 'Q2'
+    WHEN revenue_quarter = 3 THEN 'Q3'
+    ELSE 'Q4'
+  END AS quarters,
+  order_total 
+FROM cte
+ORDER BY revenue_quarter DESC;
+```
 
 #### Geographic Analysis:
 3. Highest sales and profits by region
