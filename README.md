@@ -86,17 +86,17 @@ WHERE orders.quantity IS NULL;
 ### Main Questions:
 
 * [1. What are the total sales and total profits for each year?](#1-What-are-the-total-sales-and-total-profits-for-each-year?)
-*[2. What are the total sales and total profits per quarter?](#2-What-are-the-total-sales-and-total-profits-per-quarter?)
-*[3. Which region generates the highest sales and profits?](#3-Which-region-generates-the-highest-sales-and-profits?)
-*[4. Which country and city bring in the highest sales and profits?](#4-Which-country-and-city-bring-in-the-highest-sales-and-profits?)
-*[5. What is the relationship between discount and sales, and what is the total discount per category?](#5-What-is-the-relationship-between-discount-and-sales-and-what-is-the-total-discount-per-category?)
-*[6. Which category generates the highest sales and profits in each region and country?](#6-Which-category-generates-the-highest-sales-and-profits-in-each-region-and-country?)
-*[7. Which subcategory generates the highest sales and profits in each region and country?](#7-Which-subcategory-generates-the-highest-sales-and-profits-in-each-region-and-country?)
-*[8. What are the names of the most and least profitable products?](#8-What-are-the-names-of-the-most-and-least-profitable-products?)
-*[9. Which segment contributes the most to our profits and sales?](#9-Which-segment-contributes-the-most-to-our-profits-and-sales?)
-*[10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country?)
-*[11. Which customers bring the most profit? ](#11-Which-customers-bring-the-most-profit?)
-*[12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total?)
+* [2. What are the total sales and total profits per quarter?](#2-What-are-the-total-sales-and-total-profits-per-quarter?)
+* [3. Which region generates the highest sales and profits?](#3-Which-region-generates-the-highest-sales-and-profits?)
+* [4. Which country and city bring in the highest sales and profits?](#4-Which-country-and-city-bring-in-the-highest-sales-and-profits?)
+* [5. What is the relationship between discount and sales, and what is the total discount per category?](#5-What-is-the-relationship-between-discount-and-sales-and-what-is-the-total-discount-per-category?)
+* [6. Which category generates the highest sales and profits in each region and country?](#6-Which-category-generates-the-highest-sales-and-profits-in-each-region-and-country?)
+* [7. Which subcategory generates the highest sales and profits in each region and country?](#7-Which-subcategory-generates-the-highest-sales-and-profits-in-each-region-and-country?)
+* [8. What are the names of the most and least profitable products?](#8-What-are-the-names-of-the-most-and-least-profitable-products?)
+* [9. Which segment contributes the most to our profits and sales?](#9-Which-segment-contributes-the-most-to-our-profits-and-sales?)
+* [10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country?)
+* [11. Which customers bring the most profit? ](#11-Which-customers-bring-the-most-profit?)
+* [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total?)
 
 #### Total Sales and Profits:
 1. Total sales and profits per year
