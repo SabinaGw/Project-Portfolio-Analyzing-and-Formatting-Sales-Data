@@ -5,25 +5,25 @@ This project involves reformatting and analyzing Superstore sales data to answer
 
 The analysis will utilize a combination of Excel, SQL, and PowerBI, following a structured approach to ensure comprehensive and reliable results. The process will encompass six key parts of data analysis:
 
-* [Defining the Problems](#1-defining-the-problems)
-* [Data Preparation](#2-data-preparation)
-* [Data Cleaning and Processing](#3-data-cleaning-and-processing)
-* [Data Analysis](#4-data-analysis) 
-* [Data Visualization](#5-data-visualization)
-* [Recommendations](#6-recommendations)
+* [Defining the Problems](#defining-the-problems)
+* [Data Preparation](#data-preparation)
+* [Data Cleaning and Processing](#data-cleaning-and-processing)
+* [Data Analysis](#data-analysis) 
+* [Data Visualization](#data-visualization)
+* [Recommendations](#recommendations)
 
   
-## 1. Defining the Problems
+## Defining the Problems
 #### Which products, locations, and customer segments should the company focus on and which should it avoid to maximize profits?
 What trends are emerging and what recommendations can be made based on the analysis findings?
 
-## 2. Data Preparation
+## Data Preparation
 * Data source: Datacamp.com 
 * Superstore data includes two tables: orders and products
 * Orders table contains 50,906 rows and 22 columns, covering orders from 2011-2014
 * Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
-## 3. Data Cleaning and Processing
+## Data Cleaning and Processing
 #### Tools: Excel, MySQL
 * Observation of data in Excel
 * Checking for missing data using filters and conditional formatting
@@ -80,7 +80,7 @@ SET orders.quantity = calculated_quantities.calculated_quantity
 WHERE orders.quantity IS NULL;
 ```
 
-## 4. Data Analysis
+## Data Analysis
 #### Methods: SQL for exploratory data analysis
 
 ### Main Questions:
@@ -88,16 +88,26 @@ WHERE orders.quantity IS NULL;
 [1. What are the total sales and total profits for each year?](#1-What-are-the-total-sales-and-total-profits-for-each-year?)
 
 [2. What are the total sales and total profits per quarter?](#2-What-are-the-total-sales-and-total-profits-per-quarter?)
-* [3. Which region generates the highest sales and profits?](#3-Which-region-generates-the-highest-sales-and-profits?)
-* [4. Which country and city bring in the highest sales and profits?](#4-Which-country-and-city-bring-in-the-highest-sales-and-profits?)
-* [5. What is the relationship between discount and sales, and what is the total discount per category?](#5-What-is-the-relationship-between-discount-and-sales-and-what-is-the-total-discount-per-category?)
-* [6. Which category generates the highest sales and profits in each region and country?](#6-Which-category-generates-the-highest-sales-and-profits-in-each-region-and-country?)
-* [7. Which subcategory generates the highest sales and profits in each region and country?](#7-Which-subcategory-generates-the-highest-sales-and-profits-in-each-region-and-country?)
-* [8. What are the names of the most and least profitable products?](#8-What-are-the-names-of-the-most-and-least-profitable-products?)
-* [9. Which segment contributes the most to our profits and sales?](#9-Which-segment-contributes-the-most-to-our-profits-and-sales?)
-* [10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country?)
-* [11. Which customers bring the most profit? ](#11-Which-customers-bring-the-most-profit?)
-* [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total?)
+
+[3. Which region generates the highest sales and profits?](#3-Which-region-generates-the-highest-sales-and-profits?)
+
+[4. Which country and city bring in the highest sales and profits?](#4-Which-country-and-city-bring-in-the-highest-sales-and-profits?)
+
+[5. What is the relationship between discount and sales, and what is the total discount per category?](#5-What-is-the-relationship-between-discount-and-sales-and-what-is-the-total-discount-per-category?)
+
+[6. Which category generates the highest sales and profits in each region and country?](#6-Which-category-generates-the-highest-sales-and-profits-in-each-region-and-country?)
+
+[7. Which subcategory generates the highest sales and profits in each region and country?](#7-Which-subcategory-generates-the-highest-sales-and-profits-in-each-region-and-country?)
+
+[8. What are the names of the most and least profitable products?](#8-What-are-the-names-of-the-most-and-least-profitable-products?)
+
+[9. Which segment contributes the most to our profits and sales?](#9-Which-segment-contributes-the-most-to-our-profits-and-sales?)
+
+[10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country?)
+
+[11. Which customers bring the most profit? ](#11-Which-customers-bring-the-most-profit?)
+
+[12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total?)
 
 #### Total Sales and Profits:
 1. Total sales and profits per year
