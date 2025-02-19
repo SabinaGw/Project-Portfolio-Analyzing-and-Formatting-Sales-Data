@@ -9,7 +9,6 @@ The analysis will utilize a combination of Excel, SQL, and PowerBI, following a 
 * [Data Preparation](#2-data-preparation)
 * [Data Cleaning and Processing](#3-data-cleaning-and-processing)
 * [Data Analysis](#4-data-analysis) 
-   - Analyzing sales, profits, geographic trends, product performance, customer behavior, and delivery times.
 * [Data Visualization](#5-data-visualization)
 * [Recommendations](#6-recommendations)
 
@@ -85,6 +84,8 @@ WHERE orders.quantity IS NULL;
 #### Methods: SQL for exploratory data analysis
 
 ### Main Questions:
+
+* [1.	What are the total sales and total profits for each year?](#1-What-are-the-total-sales-and-total-profits-for-each-year?)
 
 #### Total Sales and Profits:
 1. Total sales and profits per year
