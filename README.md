@@ -109,8 +109,8 @@ WHERE orders.quantity IS NULL;
 
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total?)
 
-#### Total Sales and Profits:
-1. Total sales and profits per year
+#### 1. What are the total sales and total profits for each year?
+Total sales and profits per year
    
 ```sql
  SELECT 
@@ -124,7 +124,7 @@ WHERE orders.quantity IS NULL;
 
 ![Wyniki zapytania SQL](./images/1.jpg)
 
-2. Total sales and profits per quarter
+Total sales and profits per quarter
 
 ```sql
 SELECT 
@@ -137,6 +137,7 @@ ON o.product_id = p.product_id
 GROUP BY revenue_year, revenue_quarter
 ORDER BY revenue_year DESC, revenue_quarter DESC;
 ```
+Best performing quarters from 2011-2014
 
 #### Geographic Analysis:
 3. Highest sales and profits by region
