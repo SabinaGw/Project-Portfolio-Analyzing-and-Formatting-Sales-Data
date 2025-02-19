@@ -271,13 +271,72 @@ ORDER BY total_discount DESC;
 -- Most discounted subcategories
 ```sql
 SELECT p.sub_category, p.category,
-SUM(o. discount) AS total_discount
+SUM(o.discount) AS total_discount
 FROM orders AS o 
 LEFT JOIN products AS p
 ON o.product_id = p.product_id
-GROUP BY sub_category, p.category
+GROUP BY p.sub_category, p.category
 ORDER BY total_discount DESC;
 ```
+
+### 6. Which category generates the highest sales and profits in each region and country?
+
+-- Categories with their total sales, profits, and profit margins
+SELECT 
+p.category,
+ROUND(SUM(o.sales),2) AS total_sales,
+ROUND(SUM(o.profit),2) AS total_profit,
+ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+FROM orders AS o 
+LEFT JOIN products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.category
+ORDER BY total_profit DESC;
+
+-- Highest total sales and profits per category in each region
+SELECT 
+o.region,
+p.category,
+ROUND(SUM(o.sales),2) AS total_sales,
+ROUND(SUM(o.profit),2) AS total_profit,
+ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+FROM orders AS o 
+LEFT JOIN products AS p 
+ON o.product_id = p.product_id
+GROUP BY o.region, p.category
+ORDER BY total_profit DESC;
+
+-- Top highest total sales and profits per category in each country
+
+SELECT 
+o.country,
+p.category,
+ROUND(SUM(o.sales),2) AS total_sales,
+ROUND(SUM(o.profit),2) AS total_profit,
+ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+FROM orders AS o 
+LEFT JOIN products AS p 
+ON o.product_id = p.product_id
+GROUP BY o.country, p.category
+ORDER BY total_profit DESC;
+
+-- Top lowest total sales and profits per category in each country
+
+SELECT 
+o.country,
+p.category,
+ROUND(SUM(o.sales),2) AS total_sales,
+ROUND(SUM(o.profit),2) AS total_profit,
+ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+FROM orders AS o 
+LEFT JOIN products AS p 
+ON o.product_id = p.product_id
+GROUP BY o.country, p.category
+ORDER BY total_profit ASC;
+
+### 7. Which subcategory generates the highest sales and profits in each region and country?
+
+
 
 5. Sales and profits by state and city
 
