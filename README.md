@@ -124,6 +124,7 @@ Total sales and profits per year
 
 ![Wyniki zapytania SQL](./images/1.jpg)
 
+#### 2. What are the total sales and total profits per quarter?
 Total sales and profits per quarter
 
 ```sql
@@ -162,7 +163,7 @@ FROM cte
 ORDER BY revenue_quarter DESC;
 ```
 
-#### Geographic Analysis:
+#### 3. Which region generates the highest sales and profits?
 3. Highest sales and profits by region
 
 ```sql
