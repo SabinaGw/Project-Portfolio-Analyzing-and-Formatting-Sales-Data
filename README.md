@@ -163,10 +163,9 @@ FROM cte
 ORDER BY revenue_quarter DESC;
 ```
 
-#### 3. Which region generates the highest sales and profits?
+### 3. Which region generates the highest sales and profits?
 
 Total sales, profits, and profit margins by region
-
 ```sql
 SELECT 
 region, 
@@ -178,7 +177,6 @@ GROUP BY region
 ORDER BY total_sales DESC;
 ```
 Average Order Value (AOV) and Average Number of Products per Order by region
-
 ```sql
 SELECT
 region,
@@ -188,6 +186,64 @@ FROM orders
 GROUP BY region
 ORDER BY  average_order_value DESC;
 ```
+
+### 4. Which country and city bring in the highest sales and profits?
+
+
+-- Top 10 countries' total sales and profits with their profit margins
+```sql
+SELECT 
+country, 
+ROUND(SUM(sales),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit,
+ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
+FROM orders
+GROUP BY country
+ORDER BY total_profit DESC
+LIMIT 10;
+```
+
+-- Bottom 10 countries' total sales and profits
+```sql
+SELECT 
+country, 
+ROUND(SUM(sales),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit,
+ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
+FROM orders
+GROUP BY country
+ORDER BY total_profit ASC
+LIMIT 10;
+```
+
+-- Top 10 cities' total sales and profits with their profit margins
+```sql
+SELECT 
+state, 
+city,
+ROUND(SUM(sales),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit,
+ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
+FROM orders
+GROUP BY state, city
+ORDER BY total_profit DESC
+LIMIT 10;
+```
+
+-- Bottom 10 cities' total sales and profits with their profit margins
+```sql
+SELECT 
+state, 
+city,
+ROUND(SUM(sales-discount),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit,
+ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
+FROM orders
+GROUP BY state, city
+ORDER BY total_profit ASC
+LIMIT 10;
+```
+
 
 
 5. Sales and profits by state and city
