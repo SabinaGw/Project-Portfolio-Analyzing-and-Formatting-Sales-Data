@@ -85,8 +85,8 @@ WHERE orders.quantity IS NULL;
 
 ### Main Questions:
 
-* [1. What are the total sales and total profits for each year?](#1-What-are-the-total-sales-and-total-profits-for-each-year?)
-* [2. What are the total sales and total profits per quarter?](#2-What-are-the-total-sales-and-total-profits-per-quarter?)
+[1. What are the total sales and total profits for each year?](#1-What-are-the-total-sales-and-total-profits-for-each-year?)
+[2. What are the total sales and total profits per quarter?](#2-What-are-the-total-sales-and-total-profits-per-quarter?)
 * [3. Which region generates the highest sales and profits?](#3-Which-region-generates-the-highest-sales-and-profits?)
 * [4. Which country and city bring in the highest sales and profits?](#4-Which-country-and-city-bring-in-the-highest-sales-and-profits?)
 * [5. What is the relationship between discount and sales, and what is the total discount per category?](#5-What-is-the-relationship-between-discount-and-sales-and-what-is-the-total-discount-per-category?)
