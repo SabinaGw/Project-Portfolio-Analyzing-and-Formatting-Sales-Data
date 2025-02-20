@@ -168,10 +168,10 @@ ORDER BY revenue_quarter DESC;
 Total sales, profits, and profit margins by region
 ```sql
 SELECT 
-region, 
-ROUND(SUM(sales-discount),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
+  region, 
+  ROUND(SUM(sales - discount), 2) AS total_sales,
+  ROUND(SUM(profit), 2) AS total_profit,
+  ROUND((SUM(profit) / SUM(sales - discount)) * 100, 2) AS profit_margin
 FROM orders
 GROUP BY region
 ORDER BY total_sales DESC;
@@ -179,12 +179,12 @@ ORDER BY total_sales DESC;
 Average Order Value (AOV) and Average Number of Products per Order by region
 ```sql
 SELECT
-region,
+  region,
   ROUND(SUM(sales) / COUNT(DISTINCT order_id), 2) AS average_order_value,
   ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) AS average_products_per_order
 FROM orders
 GROUP BY region
-ORDER BY  average_order_value DESC;
+ORDER BY average_order_value DESC;
 ```
 
 ### 4. Which country and city bring in the highest sales and profits?
@@ -193,23 +193,24 @@ ORDER BY  average_order_value DESC;
 -- Top 10 countries' total sales and profits with their profit margins
 ```sql
 SELECT 
-country, 
-ROUND(SUM(sales),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
+  country, 
+  ROUND(SUM(sales), 2) AS total_sales,
+  ROUND(SUM(profit), 2) AS total_profit,
+  ROUND((SUM(profit) / SUM(sales)) * 100, 2) AS profit_margin
 FROM orders
 GROUP BY country
 ORDER BY total_profit DESC
 LIMIT 10;
+
 ```
 
 -- Bottom 10 countries' total sales and profits
 ```sql
 SELECT 
-country, 
-ROUND(SUM(sales),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
+  country, 
+  ROUND(SUM(sales), 2) AS total_sales,
+  ROUND(SUM(profit), 2) AS total_profit,
+  ROUND((SUM(profit) / SUM(sales)) * 100, 2) AS profit_margin
 FROM orders
 GROUP BY country
 ORDER BY total_profit ASC
@@ -219,13 +220,13 @@ LIMIT 10;
 -- Top 10 cities' total sales and profits with their profit margins
 ```sql
 SELECT 
-state, 
-city,
-ROUND(SUM(sales),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
+  country, 
+  city,
+  ROUND(SUM(sales), 2) AS total_sales,
+  ROUND(SUM(profit), 2) AS total_profit,
+  ROUND((SUM(profit) / SUM(sales)) * 100, 2) AS profit_margin
 FROM orders
-GROUP BY state, city
+GROUP BY country, city
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
@@ -233,13 +234,13 @@ LIMIT 10;
 -- Bottom 10 cities' total sales and profits with their profit margins
 ```sql
 SELECT 
-state, 
-city,
-ROUND(SUM(sales),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales)) * 100,2) AS profit_margin
+  country, 
+  city,
+  ROUND(SUM(sales), 2) AS total_sales,
+  ROUND(SUM(profit), 2) AS total_profit,
+  ROUND((SUM(profit) / SUM(sales)) * 100, 2) AS profit_margin
 FROM orders
-GROUP BY state, city
+GROUP BY country, city
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
@@ -250,8 +251,8 @@ LIMIT 10;
 -- Discount vs Avg Sales
 ```sql
 SELECT 
-discount, 
-ROUND(AVG(sales),2) AS Avg_Sales
+  discount, 
+  ROUND(AVG(sales), 2) AS Avg_Sales
 FROM orders
 GROUP BY discount
 ORDER BY discount;
@@ -259,8 +260,9 @@ ORDER BY discount;
 
 -- Most discounted categories
 ```sql
-SELECT p.category, 
-SUM(o. discount) AS total_discount
+SELECT 
+  p.category, 
+  SUM(o.discount) AS total_discount
 FROM orders AS o 
 LEFT JOIN products AS p
 ON o.product_id = p.product_id
@@ -270,8 +272,10 @@ ORDER BY total_discount DESC;
 
 -- Most discounted subcategories
 ```sql
-SELECT p.sub_category, p.category,
-SUM(o.discount) AS total_discount
+SELECT 
+  p.sub_category, 
+  p.category,
+  SUM(o.discount) AS total_discount
 FROM orders AS o 
 LEFT JOIN products AS p
 ON o.product_id = p.product_id
@@ -284,10 +288,10 @@ ORDER BY total_discount DESC;
 -- Categories with their total sales, profits, and profit margins
 ```sql
 SELECT 
-p.category,
-ROUND(SUM(o.sales),2) AS total_sales,
-ROUND(SUM(o.profit),2) AS total_profit,
-ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+  p.category,
+  ROUND(SUM(o.sales), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit,
+  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -298,11 +302,11 @@ ORDER BY total_profit DESC;
 -- Highest total sales and profits per category in each region
 ```sql
 SELECT 
-o.region,
-p.category,
-ROUND(SUM(o.sales),2) AS total_sales,
-ROUND(SUM(o.profit),2) AS total_profit,
-ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+  o.region,
+  p.category,
+  ROUND(SUM(o.sales), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit,
+  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -310,14 +314,14 @@ GROUP BY o.region, p.category
 ORDER BY total_profit DESC;
 ```
 
--- Top highest total sales and profits per category in each country
+-- Highest total sales and profits per category in each country
 ```sql
 SELECT 
-o.country,
-p.category,
-ROUND(SUM(o.sales),2) AS total_sales,
-ROUND(SUM(o.profit),2) AS total_profit,
-ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+  o.country,
+  p.category,
+  ROUND(SUM(o.sales), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit,
+  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -325,14 +329,14 @@ GROUP BY o.country, p.category
 ORDER BY total_profit DESC;
 ```
 
--- Top lowest total sales and profits per category in each country
+-- Lowest total sales and profits per category in each country
 ```sql
 SELECT 
-o.country,
-p.category,
-ROUND(SUM(o.sales),2) AS total_sales,
-ROUND(SUM(o.profit),2) AS total_profit,
-ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+  o.country,
+  p.category,
+  ROUND(SUM(o.sales), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit,
+  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -345,10 +349,10 @@ ORDER BY total_profit ASC;
 -- Subcategories with their total sales, profits, and profit margins
 ```sql
 SELECT 
-p.sub_category,
-ROUND(SUM(o.sales),2) AS total_sales,
-ROUND(SUM(o.profit),2) AS total_profit,
-ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+  p.sub_category,
+  ROUND(SUM(o.sales), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit,
+  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -358,57 +362,56 @@ ORDER BY total_profit DESC;
 -- Subcategories with the highest total sales and profits in each region
 ```sql
 SELECT 
-o.region,
-p.sub_category,
-ROUND(SUM(o. sales - o.discount),2) AS total_sales,
-ROUND(SUM(o. profit),2) AS total_profit
+  o.region,
+  p.sub_category,
+  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o
-LEFT JOIN  products AS p 
+LEFT JOIN products AS p 
 ON o.product_id = p.product_id
-GROUP BY p.sub_category,o.region
+GROUP BY p.sub_category, o.region
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
 -- Subcategories with the lowest total sales and profits in each region
 ```sql
 SELECT 
-p.sub_category,
-ROUND(SUM(o. sales - o.discount),2) AS total_sales,
-ROUND(SUM(o. profit),2) AS total_profit
+  p.sub_category,
+  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o
-LEFT JOIN  products AS p 
+LEFT JOIN products AS p 
 ON o.product_id = p.product_id
 GROUP BY p.sub_category
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
--- Top highest total sales and profits per subcategory in each country
+-- Highest total sales and profits per subcategory in each country
 ```sql
 SELECT 
-o.country,
-p.sub_category,
-ROUND(SUM(o. sales - o.discount),2) AS total_sales,
-ROUND(SUM(o. profit),2) AS total_profit
+  o.country,
+  p.sub_category,
+  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o
-LEFT JOIN  products AS p 
+LEFT JOIN products AS p 
 ON o.product_id = p.product_id
-GROUP BY p.sub_category,o.country
+GROUP BY p.sub_category, o.country
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
--- Top lowest total sales and profits per subcategory in each country
+-- Lowest total sales and profits per subcategory in each country
 ```sql
 SELECT 
-o.country,
-p.sub_category,
-ROUND(SUM(o. sales - o.discount),2) AS total_sales,
-ROUND(SUM(o. profit),2) AS total_profit
+  o.country,
+  p.sub_category,
+  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o
-LEFT JOIN  products AS p 
+LEFT JOIN products AS p 
 ON o.product_id = p.product_id
-GROUP BY p.sub_category,o.country
-ORDER BY total_profit ASC
-LIMIT 10;
+GROUP BY p.sub_category, o.country
+ORDER BY total_profit ASC;
 ```
 
 ### 8. What are the names of the most and least profitable products?
@@ -416,11 +419,11 @@ LIMIT 10;
 -- Top 10 most profitable products
 ```sql
 SELECT 
-p.product_name,
-ROUND(SUM(o. sales - o.discount),2) AS total_sales,
-ROUND(SUM(o. profit),2) AS total_profit
+  p.product_name,
+  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o
-LEFT JOIN  products AS p 
+LEFT JOIN products AS p 
 ON o.product_id = p.product_id
 GROUP BY p.product_name
 ORDER BY total_profit DESC
@@ -430,11 +433,11 @@ LIMIT 10;
 -- Top 10 least profitable products
 ```sql
 SELECT 
-p.product_name,
-ROUND(SUM(o. sales - o.discount),2) AS total_sales,
-ROUND(SUM(o. profit),2) AS total_profit
+  p.product_name,
+  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o
-LEFT JOIN  products AS p 
+LEFT JOIN products AS p 
 ON o.product_id = p.product_id
 GROUP BY p.product_name
 ORDER BY total_profit ASC
@@ -446,9 +449,9 @@ LIMIT 10;
 -- Segments ordered by total profits
 ```sql
 SELECT 
-segment, 
-ROUND(SUM(sales),2) AS total_sales, 
-ROUND(SUM(profit),2) AS total_profit
+  segment, 
+  ROUND(SUM(sales), 2) AS total_sales, 
+  ROUND(SUM(profit), 2) AS total_profit
 FROM orders
 GROUP BY segment
 ORDER BY total_profit DESC;
@@ -459,13 +462,15 @@ ORDER BY total_profit DESC;
 -- Total number of customers
 ```sql
 SELECT 
-COUNT(DISTINCT customer_id) AS total_customers
+  COUNT(DISTINCT customer_id) AS total_customers
 FROM orders;
 ```
 
 -- Total customers per region
 ```sql
-SELECT region, COUNT(DISTINCT customer_id) AS total_customers
+SELECT 
+  region, 
+  COUNT(DISTINCT customer_id) AS total_customers
 FROM orders
 GROUP BY region
 ORDER BY total_customers DESC;
@@ -473,7 +478,9 @@ ORDER BY total_customers DESC;
 
 -- Top 10 countries with the most customers
 ```sql
-SELECT country, COUNT(DISTINCT customer_id) AS total_customers
+SELECT 
+  country, 
+  COUNT(DISTINCT customer_id) AS total_customers
 FROM orders
 GROUP BY country
 ORDER BY total_customers DESC
@@ -482,7 +489,9 @@ LIMIT 10;
 
 -- Top 10 countries with the fewest customers
 ```sql
-SELECT country, COUNT(DISTINCT customer_id) AS total_customers
+SELECT 
+  country, 
+  COUNT(DISTINCT customer_id) AS total_customers
 FROM orders
 GROUP BY country
 ORDER BY total_customers ASC
@@ -504,10 +513,11 @@ ORDER BY purchase_count DESC;
 
 -- Top 10 customers who generated the most sales compared to total profits
 ```sql
-SELECT customer_id, 
-ROUND(SUM(sales),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit
-FROM  orders
+SELECT 
+  customer_id, 
+  ROUND(SUM(sales), 2) AS total_sales,
+  ROUND(SUM(profit), 2) AS total_profit
+FROM orders
 GROUP BY customer_id
 ORDER BY total_sales DESC
 LIMIT 10;
@@ -517,7 +527,8 @@ LIMIT 10;
 
 -- Average delivery time
 ```sql
-SELECT AVG(DATEDIFF(ship_date, order_date)) AS delivery_time
+SELECT 
+  AVG(DATEDIFF(ship_date, order_date)) AS delivery_time
 FROM orders;
 ```
 -- Calculate delivery time and percentage of total orders
@@ -548,18 +559,15 @@ SELECT
   region,
   AVG(DATEDIFF(ship_date, order_date)) AS average_delivery_time,
   STDDEV(DATEDIFF(ship_date, order_date)) AS stdev_delivery_time
-FROM 
-  orders
-GROUP BY 
-  region
-ORDER BY 
-  average_delivery_time ASC;
-  ```
+FROM orders
+GROUP BY region
+ORDER BY average_delivery_time ASC;
+```
   -- Avg delivery time per  shipping mode
 ```sql
 SELECT 
-ship_mode,
- AVG(DATEDIFF(ship_date, order_date))  AS avg_shipping_time
+  ship_mode,
+  AVG(DATEDIFF(ship_date, order_date)) AS avg_shipping_time
 FROM orders
 GROUP BY ship_mode
 ORDER BY avg_shipping_time DESC;
