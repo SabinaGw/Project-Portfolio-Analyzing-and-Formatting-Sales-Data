@@ -115,7 +115,7 @@ Total sales and profits per year
 ```sql
  SELECT 
     YEAR(order_date) AS total_year, 
-    ROUND(SUM(sales - discount), 2) AS total_revenue, 
+    ROUND(SUM(sales), 2) AS total_revenue, 
     ROUND(SUM(profit), 2) AS total_profit
   FROM orders
   GROUP BY  total_year
@@ -131,7 +131,7 @@ Total sales and profits per quarter
 SELECT 
     YEAR(o.order_date) AS revenue_year,
     QUARTER(o.order_date) AS revenue_quarter,
-    ROUND(SUM((o.sales - o.discount)), 2) AS order_total 
+    ROUND(SUM((o.sales)), 2) AS order_total 
 FROM orders AS o
 LEFT JOIN products AS p
 ON o.product_id = p.product_id
