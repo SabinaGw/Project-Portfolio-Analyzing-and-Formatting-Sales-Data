@@ -411,59 +411,159 @@ ORDER BY total_profit ASC
 LIMIT 10;
 ```
 
+### 8. What are the names of the most and least profitable products?
 
-
-
-5. Sales and profits by state and city
-
+-- Top 10 most profitable products
 ```sql
--- Top 10 Cities by Profit
 SELECT 
-state, 
-city,
-ROUND(SUM(sales-discount),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
-FROM orders
-GROUP BY state, city
+p.product_name,
+ROUND(SUM(o. sales - o.discount),2) AS total_sales,
+ROUND(SUM(o. profit),2) AS total_profit
+FROM orders AS o
+LEFT JOIN  products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.product_name
 ORDER BY total_profit DESC
 LIMIT 10;
--- Bottom 10 Cities by Profit
+```
+
+-- Top 10 least profitable products
+```sql
 SELECT 
-state, 
-city,
-ROUND(SUM(sales-discount),2) AS total_sales,
-ROUND(SUM(profit),2) AS total_profit,
-ROUND((SUM(profit)/SUM(sales-discount)) * 100,2) AS profit_margin
-FROM orders
-GROUP BY state, city
+p.product_name,
+ROUND(SUM(o. sales - o.discount),2) AS total_sales,
+ROUND(SUM(o. profit),2) AS total_profit
+FROM orders AS o
+LEFT JOIN  products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.product_name
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
-   
-#### Product Analysis:
-5. Most profitable categories and subcategories
-   
-6. Most profitable products
 
-7. Gross margin analysis: calculating gross margin for different product categories
-8. Price variability analysis: how price variability affects sales and profits
+### 9. Which segment contributes the most to our profits and sales?
 
-#### Customer Analysis:
-9. Customer segments
-10. Total number of customers
-11. Customer retention analysis: repeat purchases and retention rates. Loyalty program
+-- Segments ordered by total profits
+```sql
+SELECT 
+segment, 
+ROUND(SUM(sales),2) AS total_sales, 
+ROUND(SUM(profit),2) AS total_profit
+FROM orders
+GROUP BY segment
+ORDER BY total_profit DESC;
+```
 
-#### Sales Analysis:
-12. Relationship between discounts and sales
-13. Basket analysis: average order value and number of products per order
+### 10. How many unique customers do we have in total, and how many are there per region and country?
 
-#### Delivery Time Analysis:
-14. Delivery time of products (quantity and %)
-15. Average delivery time
-16. Differences in delivery time based on location
-17. Deviation analysis
-18. Type of products vs. delivery time
+-- Total number of customers
+```sql
+SELECT 
+COUNT(DISTINCT customer_id) AS total_customers
+FROM orders;
+```
+
+-- Total customers per region
+```sql
+SELECT region, COUNT(DISTINCT customer_id) AS total_customers
+FROM orders
+GROUP BY region
+ORDER BY total_customers DESC;
+```
+
+-- Top 10 countries with the most customers
+```sql
+SELECT country, COUNT(DISTINCT customer_id) AS total_customers
+FROM orders
+GROUP BY country
+ORDER BY total_customers DESC
+LIMIT 10;
+```
+
+-- Top 10 countries with the fewest customers
+```sql
+SELECT country, COUNT(DISTINCT customer_id) AS total_customers
+FROM orders
+GROUP BY country
+ORDER BY total_customers ASC
+LIMIT 10;
+```
+
+### 11. Which customers bring the most profit?
+
+-- Identify repeat purchases by customers
+```sql
+SELECT 
+  customer_id,
+  COUNT(*) AS purchase_count
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(*) > 1
+ORDER BY purchase_count DESC;
+```
+
+-- Top 10 customers who generated the most sales compared to total profits
+```sql
+SELECT customer_id, 
+ROUND(SUM(sales),2) AS total_sales,
+ROUND(SUM(profit),2) AS total_profit
+FROM  orders
+GROUP BY customer_id
+ORDER BY total_sales DESC
+LIMIT 10;
+```
+
+### 12. What is the average delivery time per class and in total?
+
+-- Average delivery time
+```sql
+SELECT AVG(DATEDIFF(ship_date, order_date)) AS delivery_time
+FROM orders;
+```
+-- Calculate delivery time and percentage of total orders
+```sql
+WITH delivery AS (
+  SELECT 
+    order_id,
+    order_date,
+    ship_date,
+    DATEDIFF(ship_date, order_date) AS delivery_time,
+    quantity
+  FROM orders
+),
+total_orders AS (
+  SELECT COUNT(order_id) AS total_order_count FROM delivery
+)
+SELECT 
+  delivery_time, 
+  COUNT(order_id) AS order_count,
+  ROUND((COUNT(order_id) / (SELECT total_order_count FROM total_orders)) * 100, 2) AS percentage_of_total
+FROM delivery
+GROUP BY delivery_time
+ORDER BY delivery_time DESC;
+```
+-- Avg delivery time and standard deviation per region
+```sql
+SELECT 
+  region,
+  AVG(DATEDIFF(ship_date, order_date)) AS average_delivery_time,
+  STDDEV(DATEDIFF(ship_date, order_date)) AS stdev_delivery_time
+FROM 
+  orders
+GROUP BY 
+  region
+ORDER BY 
+  average_delivery_time ASC;
+  ```
+  -- Avg delivery time per  shipping mode
+```sql
+SELECT 
+ship_mode,
+ AVG(DATEDIFF(ship_date, order_date))  AS avg_shipping_time
+FROM orders
+GROUP BY ship_mode
+ORDER BY avg_shipping_time DESC;
+```
 
 ## 5. Data Visualization
 #### Tool: PowerBI
