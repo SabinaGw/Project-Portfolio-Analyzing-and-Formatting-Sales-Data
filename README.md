@@ -282,6 +282,7 @@ ORDER BY total_discount DESC;
 ### 6. Which category generates the highest sales and profits in each region and country?
 
 -- Categories with their total sales, profits, and profit margins
+```sql
 SELECT 
 p.category,
 ROUND(SUM(o.sales),2) AS total_sales,
@@ -292,8 +293,10 @@ LEFT JOIN products AS p
 ON o.product_id = p.product_id
 GROUP BY p.category
 ORDER BY total_profit DESC;
+```
 
 -- Highest total sales and profits per category in each region
+```sql
 SELECT 
 o.region,
 p.category,
@@ -305,9 +308,10 @@ LEFT JOIN products AS p
 ON o.product_id = p.product_id
 GROUP BY o.region, p.category
 ORDER BY total_profit DESC;
+```
 
 -- Top highest total sales and profits per category in each country
-
+```sql
 SELECT 
 o.country,
 p.category,
@@ -319,9 +323,10 @@ LEFT JOIN products AS p
 ON o.product_id = p.product_id
 GROUP BY o.country, p.category
 ORDER BY total_profit DESC;
+```
 
 -- Top lowest total sales and profits per category in each country
-
+```sql
 SELECT 
 o.country,
 p.category,
@@ -333,8 +338,79 @@ LEFT JOIN products AS p
 ON o.product_id = p.product_id
 GROUP BY o.country, p.category
 ORDER BY total_profit ASC;
+```
 
 ### 7. Which subcategory generates the highest sales and profits in each region and country?
+
+-- Subcategories with their total sales, profits, and profit margins
+```sql
+SELECT 
+p.sub_category,
+ROUND(SUM(o.sales),2) AS total_sales,
+ROUND(SUM(o.profit),2) AS total_profit,
+ROUND(SUM(o.profit)/SUM(o.sales)*100, 2) AS profit_margin
+FROM orders AS o 
+LEFT JOIN products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.sub_category
+ORDER BY total_profit DESC;
+```
+-- Subcategories with the highest total sales and profits in each region
+```sql
+SELECT 
+o.region,
+p.sub_category,
+ROUND(SUM(o. sales - o.discount),2) AS total_sales,
+ROUND(SUM(o. profit),2) AS total_profit
+FROM orders AS o
+LEFT JOIN  products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.sub_category,o.region
+ORDER BY total_profit DESC
+LIMIT 10;
+```
+-- Subcategories with the lowest total sales and profits in each region
+```sql
+SELECT 
+p.sub_category,
+ROUND(SUM(o. sales - o.discount),2) AS total_sales,
+ROUND(SUM(o. profit),2) AS total_profit
+FROM orders AS o
+LEFT JOIN  products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.sub_category
+ORDER BY total_profit ASC
+LIMIT 10;
+```
+-- Top highest total sales and profits per subcategory in each country
+```sql
+SELECT 
+o.country,
+p.sub_category,
+ROUND(SUM(o. sales - o.discount),2) AS total_sales,
+ROUND(SUM(o. profit),2) AS total_profit
+FROM orders AS o
+LEFT JOIN  products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.sub_category,o.country
+ORDER BY total_profit DESC
+LIMIT 10;
+```
+-- Top lowest total sales and profits per subcategory in each country
+```sql
+SELECT 
+o.country,
+p.sub_category,
+ROUND(SUM(o. sales - o.discount),2) AS total_sales,
+ROUND(SUM(o. profit),2) AS total_profit
+FROM orders AS o
+LEFT JOIN  products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.sub_category,o.country
+ORDER BY total_profit ASC
+LIMIT 10;
+```
+
 
 
 
