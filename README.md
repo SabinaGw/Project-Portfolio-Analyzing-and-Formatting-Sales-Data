@@ -274,12 +274,11 @@ ORDER BY total_discount DESC;
 ```sql
 SELECT 
   p.sub_category, 
-  p.category,
   SUM(o.discount) AS total_discount
 FROM orders AS o 
 LEFT JOIN products AS p
 ON o.product_id = p.product_id
-GROUP BY p.sub_category, p.category
+GROUP BY p.sub_category
 ORDER BY total_discount DESC;
 ```
 
