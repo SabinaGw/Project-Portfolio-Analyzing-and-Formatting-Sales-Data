@@ -23,6 +23,8 @@ What trends are emerging and what recommendations can be made based on the analy
 * Orders table contains 50,906 rows and 22 columns, covering orders from 2011-2014
 * Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
+![Power BI Model View ](./images/power bi.jpg)
+
 ## Data Cleaning and Processing
 #### Tools: Excel, MySQL
 * Observation of data in Excel
@@ -120,8 +122,8 @@ Total sales and profits per year
   ORDER BY total_year DESC;
 ```
 
-![Wyniki zapytania SQL](./images/1.jpg)
-![Wyniki zapytania SQL](./images/PB1.jpg)
+![Query Results SQL](./images/1.jpg)
+![ChartL](./images/PB1.jpg)
 
 ### 2. What are the total sales and total profits per quarter?
 Total sales and profits per quarter
