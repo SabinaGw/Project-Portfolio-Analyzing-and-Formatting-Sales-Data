@@ -121,6 +121,7 @@ Total sales and profits per year
 ```
 
 ![Wyniki zapytania SQL](./images/1.jpg)
+![Wyniki zapytania SQL](./images/PB1.jpg)
 
 ### 2. What are the total sales and total profits per quarter?
 Total sales and profits per quarter
