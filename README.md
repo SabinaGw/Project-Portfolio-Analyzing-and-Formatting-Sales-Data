@@ -24,6 +24,7 @@ What trends are emerging and what recommendations can be made based on the analy
 * Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
 ![Power BI Model View](./images/powerbi.jpg)
+
 Model view shows us the contents of two tables, with product_id acting as the primary key. In the orders table, product_id serves as the foreign key that links to the products table's primary key. This relationship allows us to join the two tables and enrich our order data with additional product details, ensuring a comprehensive dataset for analysis.
 
 ## Data Cleaning and Processing
