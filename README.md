@@ -23,6 +23,8 @@ What trends are emerging and what recommendations can be made based on the analy
 * Orders table contains 50,906 rows and 22 columns, covering orders from 2011-2014
 * Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
+Let's take a closer look at the content of our tables and how they can be joined using product_id as the main key.
+
 ![Power BI Model View](./images/powerbi.jpg)
 
 ## Data Cleaning and Processing
@@ -33,7 +35,9 @@ What trends are emerging and what recommendations can be made based on the analy
 * Formatting columns (dates, numbers, currency)
 * Filling in missing data in MySQL
 
-First, I identified the missing values in the quantity column. Then, for rows where quantity was not NULL, I calculated the unit price as sales / quantity. Next, I calculated the missing quantities for rows where quantity was NULL using the calculated unit prices and a JOIN query. To do this, I created a temporary table calculated_quantities to store the missing values. Finally, I updated the orders table, filling in the missing quantity values with the calculated amounts.
+Let's start by loading the data into SQL. From our initial analysis in Excel, we discovered that there are missing values in the quantity column. First, we'll identify these missing values to understand the gaps in our data.
+Next, we'll calculate the unit price for the rows where quantity is available. This will involve dividing sales by quantity. With these unit prices in hand, we'll then estimate the missing quantities for the rows where quantity is NULL. We'll achieve this by joining the data on common attributes like product_id and discount.
+To manage this process efficiently, we'll create a temporary table named calculated_quantities to store the missing values. Finally, we'll update the orders table, filling in the missing quantity values with our calculated amounts. This structured approach ensures our data's completeness and accuracy.
 
 ```sql
 CREATE TEMPORARY TABLE calculated_quantities AS   -- Filling in missing quantity data
