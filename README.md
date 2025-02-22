@@ -34,8 +34,7 @@ What trends are emerging and what recommendations can be made based on the analy
 First, I identified the missing values in the quantity column. Then, for rows where quantity was not NULL, I calculated the unit price as sales / quantity. Next, I calculated the missing quantities for rows where quantity was NULL using the calculated unit prices and a JOIN query. To do this, I created a temporary table calculated_quantities to store the missing values. Finally, I updated the orders table, filling in the missing quantity values with the calculated amounts.
 
 ```sql
--- Filling in missing quantity data
-CREATE TEMPORARY TABLE calculated_quantities AS
+CREATE TEMPORARY TABLE calculated_quantities AS -- Filling in missing quantity data
 WITH missing_values AS (
   SELECT product_id, 
          discount, 
@@ -70,8 +69,7 @@ INNER JOIN unit_price AS u
 ON m.product_id = u.product_id 
 AND m.discount = u.discount;
 
--- Update table with calculated quantities
-UPDATE orders
+UPDATE orders -- Update table with calculated quantities
 JOIN calculated_quantities
 ON orders.product_id = calculated_quantities.product_id
 AND orders.discount = calculated_quantities.discount
