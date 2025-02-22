@@ -23,7 +23,7 @@ What trends are emerging and what recommendations can be made based on the analy
 * Orders table contains 50,906 rows and 22 columns, covering orders from 2011-2014
 * Products table contains 10,292 rows and 5 columns, covering products in 3 categories: technology, furniture, and office supplies
 
-![Power BI Model View](./images/power%20bi.jpg)
+![Power BI Model View](./images/powerbi.jpg)
 
 ## Data Cleaning and Processing
 #### Tools: Excel, MySQL
