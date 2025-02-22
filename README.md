@@ -145,6 +145,9 @@ ON o.product_id = p.product_id
 GROUP BY revenue_year, revenue_quarter
 ORDER BY revenue_year DESC, revenue_quarter DESC;
 ```
+![SQL](./images/2a.jpg)
+![ChartL](./images/PB2.jpg)
+
 Best performing quarters from 2011-2014
 
 ```sql
