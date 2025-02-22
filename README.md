@@ -69,6 +69,7 @@ FROM missing_values AS m
 INNER JOIN unit_price AS u 
 ON m.product_id = u.product_id 
 AND m.discount = u.discount;
+
 -- Update table with calculated quantities
 UPDATE orders
 JOIN calculated_quantities
