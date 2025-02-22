@@ -31,6 +31,8 @@ What trends are emerging and what recommendations can be made based on the analy
 * Formatting columns (dates, numbers, currency)
 * Filling in missing data in MySQL
 
+First, I identified the missing values in the quantity column. Then, for rows where quantity was not NULL, I calculated the unit price as sales / quantity. Next, I calculated the missing quantities for rows where quantity was NULL using the calculated unit prices and a JOIN query. To do this, I created a temporary table calculated_quantities to store the missing values. Finally, I updated the orders table, filling in the missing quantity values with the calculated amounts.
+
 ```sql
 -- Filling in missing quantity data
 CREATE TEMPORARY TABLE calculated_quantities AS
@@ -67,9 +69,6 @@ FROM missing_values AS m
 INNER JOIN unit_price AS u 
 ON m.product_id = u.product_id 
 AND m.discount = u.discount;
-```
-
-```sql
 -- Update table with calculated quantities
 UPDATE orders
 JOIN calculated_quantities
