@@ -129,6 +129,8 @@ Total sales and profits per year
 ![Query Results SQL](./images/1.jpg)
 ![ChartL](./images/PB1.jpg)
 
+The data above shows a consistent increase in both sales and profits from 2011 to 2014. Sales grew from 2250.94K in 2011 to 4276.7K in 2014, while profits rose from 247.13K in 2011 to 498.17K in 2014. This indicates a steady improvement in our financial performance over the years.
+
 ### 2. What are the total sales and total profits per quarter?
 Total sales and profits per quarter
 
