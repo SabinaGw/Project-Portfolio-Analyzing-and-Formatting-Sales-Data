@@ -34,14 +34,14 @@ What trends are emerging and what recommendations can be made based on the analy
 First, I identified the missing values in the quantity column. Then, for rows where quantity was not NULL, I calculated the unit price as sales / quantity. Next, I calculated the missing quantities for rows where quantity was NULL using the calculated unit prices and a JOIN query. To do this, I created a temporary table calculated_quantities to store the missing values. Finally, I updated the orders table, filling in the missing quantity values with the calculated amounts.
 
 ```sql
-CREATE TEMPORARY TABLE calculated_quantities AS -- Filling in missing quantity data
+CREATE TEMPORARY TABLE calculated_quantities AS   -- Filling in missing quantity data
 WITH missing_values AS (
   SELECT product_id, 
          discount, 
          region,
          sales
   FROM orders 
-  WHERE quantity IS NULL  -- Find rows with NULL quantity
+  WHERE quantity IS NULL   -- Find rows with NULL quantity
 ),
 unit_price AS (
   SELECT 
@@ -56,20 +56,20 @@ unit_price AS (
   RIGHT JOIN missing_values AS m 
   ON o.product_id = m.product_id 
   AND o.discount = m.discount 
-  WHERE o.quantity IS NOT NULL  -- Find rows with non-NULL quantity
+  WHERE o.quantity IS NOT NULL   -- Find rows with non-NULL quantity
 )
 SELECT 
   m.product_id, 
   m.discount, 
   m.region,
   m.sales, 
-  ROUND((m.sales/u.unit_price), 0) AS calculated_quantity  -- Calculate missing quantity
+  ROUND((m.sales/u.unit_price), 0) AS calculated_quantity   -- Calculate missing quantity
 FROM missing_values AS m 
 INNER JOIN unit_price AS u 
 ON m.product_id = u.product_id 
 AND m.discount = u.discount;
 
-UPDATE orders -- Update table with calculated quantities
+UPDATE orders   -- Update table with calculated quantities
 JOIN calculated_quantities
 ON orders.product_id = calculated_quantities.product_id
 AND orders.discount = calculated_quantities.discount
