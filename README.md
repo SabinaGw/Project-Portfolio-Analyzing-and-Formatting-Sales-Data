@@ -173,7 +173,7 @@ FROM cte
 ORDER BY revenue_quarter DESC;
 ```
 ![SQL](./images/2b.jpg)
-![ChartL](./images/PB3.jpg)
+![ChartL](./images/PB4.jpg)
 
 ### 3. Which region generates the highest sales and profits?
 
