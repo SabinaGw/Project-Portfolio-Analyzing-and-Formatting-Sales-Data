@@ -188,6 +188,9 @@ FROM orders
 GROUP BY region
 ORDER BY total_sales DESC;
 ```
+![SQL](./images/3a.jpg)
+![ChartL](./images/PB5.jpg)
+
 Average Order Value (AOV) and Average Number of Products per Order by region
 ```sql
 SELECT
