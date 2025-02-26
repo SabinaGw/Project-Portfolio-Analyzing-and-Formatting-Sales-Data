@@ -114,7 +114,7 @@ WHERE orders.quantity IS NULL;
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total)
 
 ### 1. What are the total sales and total profits for each year?
-##### Total sales and profits per year
+#### Total sales and profits per year
    
 ```sql
  SELECT 
@@ -126,13 +126,13 @@ WHERE orders.quantity IS NULL;
   ORDER BY total_year DESC;
 ```
 
-![Query Results SQL](./images/1.jpg)
 ![ChartL](./images/PB1.jpg)
+![Query Results SQL](./images/1.jpg)
 
 The data above shows a consistent increase in both sales and profits from 2011 to 2014. Sales grew from 2250.94K in 2011 to 4276.7K in 2014, while profits rose from 247.13K in 2011 to 498.17K in 2014. This indicates a steady improvement in Superstore financial performance over the years.
 
 ### 2. What are the total sales and total profits per quarter?
-##### Total sales and profits per quarter
+#### Total sales and profits per quarter
 
 ```sql
 SELECT 
@@ -145,10 +145,10 @@ ON o.product_id = p.product_id
 GROUP BY revenue_year, revenue_quarter
 ORDER BY revenue_year DESC, revenue_quarter DESC;
 ```
-![SQL](./images/2a.jpg)
 ![ChartL](./images/PB2.jpg)
+![SQL](./images/2a.jpg)
 
-##### Best performing quarters from 2011-2014
+#### Best performing quarters from 2011-2014
 
 ```sql
 WITH cte AS (
@@ -172,12 +172,12 @@ SELECT
 FROM cte
 ORDER BY revenue_quarter DESC;
 ```
-![SQL](./images/2b.jpg)
 ![ChartL](./images/PB4.jpg)
+![SQL](./images/2b.jpg)
 
 ### 3. Which region generates the highest sales and profits?
 
-Total sales, profits, and profit margins by region
+#### Total sales, profits, and profit margins by region
 ```sql
 SELECT 
   region, 
@@ -188,10 +188,10 @@ FROM orders
 GROUP BY region
 ORDER BY total_sales DESC;
 ```
-![SQL](./images/3a.jpg)
 ![ChartL](./images/PB5.jpg)
+![SQL](./images/3a.jpg)
 
-Average Order Value (AOV) and Average Number of Products per Order by region
+#### Average Order Value (AOV) and Average Number of Products per Order by region
 ```sql
 SELECT
   region,
@@ -201,13 +201,13 @@ FROM orders
 GROUP BY region
 ORDER BY average_order_value DESC;
 ```
-![SQL](./images/3b.jpg)
 ![ChartL](./images/PB6.jpg)
+![SQL](./images/3b.jpg)
 
 ### 4. Which country and city bring in the highest sales and profits?
 
 
--- Top 10 countries' total sales and profits with their profit margins
+#### Top 10 countries' total sales and profits with their profit margins
 ```sql
 SELECT 
   country, 
@@ -220,12 +220,10 @@ ORDER BY total_profit DESC
 LIMIT 10;
 
 ```
-
-![SQL](./images/4a.jpg)
 ![ChartL](./images/PB7.jpg)
+![SQL](./images/4a.jpg)
 
-
--- Bottom 10 countries' total sales and profits
+#### Bottom 10 countries' total sales and profits
 ```sql
 SELECT 
   country, 
@@ -237,11 +235,10 @@ GROUP BY country
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
-
-![SQL](./images/4b.jpg)
 ![ChartL](./images/PB8.jpg)
+![SQL](./images/4b.jpg)
 
--- Top 10 cities' total sales and profits with their profit margins
+#### Top 10 cities' total sales and profits with their profit margins
 ```sql
 SELECT 
   country, 
@@ -254,11 +251,10 @@ GROUP BY country, city
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
-
-![SQL](./images/4c.jpg)
 ![ChartL](./images/PB9.jpg)
+![SQL](./images/4c.jpg)
 
--- Bottom 10 cities' total sales and profits with their profit margins
+#### Bottom 10 cities' total sales and profits with their profit margins
 ```sql
 SELECT 
   country, 
@@ -271,13 +267,13 @@ GROUP BY country, city
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
-![SQL](./images/4d.jpg)
 ![ChartL](./images/PB10.jpg)
+![SQL](./images/4d.jpg)
 
 ### 5. What is the relationship between discount and sales, and what is the total discount per category?
 
 
--- Discount vs Avg Sales
+#### Discount vs Avg Sales
 ```sql
 SELECT 
   discount, 
@@ -286,10 +282,10 @@ FROM orders
 GROUP BY discount
 ORDER BY discount;
 ```
-![SQL](./images/5a.jpg) 
 ![ChartL](./images/PB11.jpg)
+![SQL](./images/5a.jpg) 
 
--- Most discounted categories
+#### Most discounted categories
 ```sql
 SELECT 
   p.category, 
@@ -300,10 +296,10 @@ ON o.product_id = p.product_id
 GROUP BY category
 ORDER BY total_discount DESC;
 ```
-![SQL](./images/5b.jpg) 
 ![ChartL](./images/PB12.jpg)
+![SQL](./images/5b.jpg) 
 
--- Most discounted subcategories
+#### Most discounted subcategories
 ```sql
 SELECT 
   p.sub_category, 
@@ -314,12 +310,12 @@ ON o.product_id = p.product_id
 GROUP BY p.sub_category
 ORDER BY total_discount DESC;
 ```
-![SQL](./images/5c.jpg) 
 ![ChartL](./images/PB13.jpg)
+![SQL](./images/5c.jpg) 
 
 ### 6. Which category generates the highest sales and profits in each region and country?
 
--- Categories with their total sales, profits, and profit margins
+#### Categories with their total sales, profits, and profit margins
 ```sql
 SELECT 
   p.category,
@@ -332,11 +328,10 @@ ON o.product_id = p.product_id
 GROUP BY p.category
 ORDER BY total_profit DESC;
 ```
-
-![SQL](./images/6a.jpg) 
 ![ChartL](./images/PB14.jpg)
+![SQL](./images/6a.jpg) 
 
--- Highest total sales and profits per category in each region
+#### Highest total sales and profits per category in each region
 ```sql
 SELECT 
   o.region,
@@ -353,7 +348,7 @@ ORDER BY total_profit DESC;
 
 ![SQL](./images/6b.jpg) 
 
--- Highest total sales and profits per category in each country
+#### Highest total sales and profits per category in each country
 ```sql
 SELECT 
   o.country,
@@ -369,7 +364,7 @@ ORDER BY total_profit DESC;
 ```
 ![SQL](./images/6c.jpg) 
 
--- Lowest total sales and profits per category in each country
+#### Lowest total sales and profits per category in each country
 ```sql
 SELECT 
   o.country,
@@ -388,7 +383,7 @@ ORDER BY total_profit ASC;
 
 ### 7. Which subcategory generates the highest sales and profits in each region and country?
 
--- Subcategories with their total sales, profits, and profit margins
+#### Subcategories with their total sales, profits, and profit margins
 ```sql
 SELECT 
   p.sub_category,
@@ -404,7 +399,7 @@ ORDER BY total_profit DESC;
 
 ![SQL](./images/7a.jpg) 
 
--- Subcategories with the highest total sales and profits in each region
+#### Subcategories with the highest total sales and profits in each region
 ```sql
 SELECT 
   o.region,
@@ -421,7 +416,7 @@ LIMIT 10;
 
 ![SQL](./images/7b.jpg) 
 
--- Subcategories with the lowest total sales and profits in each region
+#### Subcategories with the lowest total sales and profits in each region
 ```sql
 SELECT 
   p.sub_category,
@@ -436,7 +431,7 @@ LIMIT 10;
 ```
 ![SQL](./images/7c.jpg) 
 
--- Highest total sales and profits per subcategory in each country
+#### Highest total sales and profits per subcategory in each country
 ```sql
 SELECT 
   o.country,
@@ -452,7 +447,7 @@ LIMIT 10;
 ```
 ![SQL](./images/7d.jpg) 
 
--- Lowest total sales and profits per subcategory in each country
+#### Lowest total sales and profits per subcategory in each country
 ```sql
 SELECT 
   o.country,
@@ -470,7 +465,7 @@ ORDER BY total_profit ASC;
 
 ### 8. What are the names of the most and least profitable products?
 
--- Top 10 most profitable products
+#### Top 10 most profitable products
 ```sql
 SELECT 
   p.product_name,
@@ -485,7 +480,7 @@ LIMIT 10;
 ```
 ![SQL](./images/8a.jpg) 
 
--- Top 10 least profitable products
+#### Top 10 least profitable products
 ```sql
 SELECT 
   p.product_name,
@@ -502,7 +497,7 @@ LIMIT 10;
 
 ### 9. Which segment contributes the most to our profits and sales?
 
--- Segments ordered by total profits
+#### Segments ordered by total profits
 ```sql
 SELECT 
   segment, 
@@ -515,7 +510,7 @@ ORDER BY total_profit DESC;
 ![SQL](./images/9a.jpg) 
 ### 10. How many unique customers do we have in total, and how many are there per region and country?
 
--- Total number of customers
+#### Total number of customers
 ```sql
 SELECT 
   COUNT(DISTINCT customer_id) AS total_customers
@@ -534,7 +529,7 @@ ORDER BY total_customers DESC;
 ```
 ![SQL](./images/10b.jpg) 
 
--- Top 10 countries with the most customers
+#### Top 10 countries with the most customers
 ```sql
 SELECT 
   country, 
@@ -546,7 +541,7 @@ LIMIT 10;
 ```
 ![SQL](./images/10c.jpg) 
 
--- Top 10 countries with the fewest customers
+#### Top 10 countries with the fewest customers
 ```sql
 SELECT 
   country, 
@@ -560,7 +555,7 @@ LIMIT 10;
 
 ### 11. Which customers bring the most profit?
 
--- Identify repeat purchases by customers
+#### Identify repeat purchases by customers
 ```sql
 SELECT 
   customer_id,
@@ -572,7 +567,7 @@ ORDER BY purchase_count DESC;
 ```
 ![SQL](./images/11a.jpg) 
 
--- Top 10 customers who generated the most sales compared to total profits
+#### Top 10 customers who generated the most sales compared to total profits
 ```sql
 SELECT 
   customer_id, 
@@ -587,7 +582,7 @@ LIMIT 10;
 
 ### 12. What is the average delivery time per class and in total?
 
--- Average delivery time
+#### Average delivery time
 ```sql
 SELECT 
   AVG(DATEDIFF(ship_date, order_date)) AS delivery_time
@@ -595,7 +590,7 @@ FROM orders;
 ```
 ![SQL](./images/12a.jpg) 
 
--- Calculate delivery time and percentage of total orders
+#### Calculate delivery time and percentage of total orders
 ```sql
 WITH delivery AS (
   SELECT 
@@ -619,7 +614,7 @@ ORDER BY delivery_time DESC;
 ```
 ![SQL](./images/12b.jpg) 
 
--- Avg delivery time and standard deviation per region
+#### Avg delivery time and standard deviation per region
 ```sql
 SELECT 
   region,
@@ -631,7 +626,7 @@ ORDER BY average_delivery_time ASC;
 ```
 ![SQL](./images/12c.jpg) 
 
-  -- Avg delivery time per  shipping mode
+#### Avg delivery time per  shipping mode
 ```sql
 SELECT 
   ship_mode,
