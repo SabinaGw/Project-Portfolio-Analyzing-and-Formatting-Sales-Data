@@ -333,6 +333,9 @@ GROUP BY p.category
 ORDER BY total_profit DESC;
 ```
 
+![SQL](./images/6a.jpg) 
+![ChartL](./images/PB14.jpg)
+
 -- Highest total sales and profits per category in each region
 ```sql
 SELECT 
@@ -348,6 +351,8 @@ GROUP BY o.region, p.category
 ORDER BY total_profit DESC;
 ```
 
+![SQL](./images/6b.jpg) 
+
 -- Highest total sales and profits per category in each country
 ```sql
 SELECT 
@@ -362,6 +367,7 @@ ON o.product_id = p.product_id
 GROUP BY o.country, p.category
 ORDER BY total_profit DESC;
 ```
+![SQL](./images/6c.jpg) 
 
 -- Lowest total sales and profits per category in each country
 ```sql
@@ -377,6 +383,8 @@ ON o.product_id = p.product_id
 GROUP BY o.country, p.category
 ORDER BY total_profit ASC;
 ```
+![SQL](./images/6d.jpg) 
+
 
 ### 7. Which subcategory generates the highest sales and profits in each region and country?
 
@@ -393,6 +401,9 @@ ON o.product_id = p.product_id
 GROUP BY p.sub_category
 ORDER BY total_profit DESC;
 ```
+
+![SQL](./images/7a.jpg) 
+
 -- Subcategories with the highest total sales and profits in each region
 ```sql
 SELECT 
@@ -407,6 +418,9 @@ GROUP BY p.sub_category, o.region
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
+
+![SQL](./images/7b.jpg) 
+
 -- Subcategories with the lowest total sales and profits in each region
 ```sql
 SELECT 
@@ -420,6 +434,8 @@ GROUP BY p.sub_category
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
+![SQL](./images/7c.jpg) 
+
 -- Highest total sales and profits per subcategory in each country
 ```sql
 SELECT 
@@ -434,6 +450,8 @@ GROUP BY p.sub_category, o.country
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
+![SQL](./images/7d.jpg) 
+
 -- Lowest total sales and profits per subcategory in each country
 ```sql
 SELECT 
@@ -447,6 +465,8 @@ ON o.product_id = p.product_id
 GROUP BY p.sub_category, o.country
 ORDER BY total_profit ASC;
 ```
+
+![SQL](./images/7e.jpg) 
 
 ### 8. What are the names of the most and least profitable products?
 
