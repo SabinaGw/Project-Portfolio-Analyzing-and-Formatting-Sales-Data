@@ -160,11 +160,10 @@ SELECT
 FROM cte
 ORDER BY revenue_quarter DESC;
 ```
-The results of above code we can see at the following table:
-![ChartL](./images/PB4.jpg)
-This table helps us understand which quarters were the most profitable from 2011 to 2014. This information can pave the way for strategic investments and marketing efforts.
 
+![ChartL](./images/PB4.jpg)
 ![SQL](./images/2b.jpg)
+The results shown above can help us understand which quarters were the most profitable from 2011 to 2014, aiding in planning business areas like marketing, inventory levels, and optimizing human resources during peak periods. This can also pave the way for strategic investments.
 
 #### - Total sales and profits per quarter
 
