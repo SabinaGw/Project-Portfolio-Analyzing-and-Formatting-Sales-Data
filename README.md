@@ -136,24 +136,8 @@ The results show a consistent increase in both sales and profits from 2011 to 20
 
 
 ### 2. What are the total sales and total profits per quarter?
-#### - Total sales and profits per quarter
-
-```sql
-SELECT 
-    YEAR(o.order_date) AS revenue_year,
-    QUARTER(o.order_date) AS revenue_quarter,
-    ROUND(SUM((o.sales)), 2) AS order_total 
-FROM orders AS o
-LEFT JOIN products AS p
-ON o.product_id = p.product_id
-GROUP BY revenue_year, revenue_quarter
-ORDER BY revenue_year DESC, revenue_quarter DESC;
-```
-![ChartL](./images/PB2.jpg)
-![SQL](./images/2a.jpg)
-
 #### Best performing quarters from 2011-2014
-
+Let's analyze the total sales and profits per quarter, as demonstrated by the code below:
 ```sql
 WITH cte AS (
   SELECT 
@@ -176,8 +160,29 @@ SELECT
 FROM cte
 ORDER BY revenue_quarter DESC;
 ```
+The results of above code we can see at the following table:
 ![ChartL](./images/PB4.jpg)
+This table helps us understand which quarters were the most profitable from 2011 to 2014. This information can pave the way for strategic investments and marketing efforts.
+
 ![SQL](./images/2b.jpg)
+
+#### - Total sales and profits per quarter
+
+```sql
+SELECT 
+    YEAR(o.order_date) AS revenue_year,
+    QUARTER(o.order_date) AS revenue_quarter,
+    ROUND(SUM((o.sales)), 2) AS order_total 
+FROM orders AS o
+LEFT JOIN products AS p
+ON o.product_id = p.product_id
+GROUP BY revenue_year, revenue_quarter
+ORDER BY revenue_year DESC, revenue_quarter DESC;
+```
+![ChartL](./images/PB2.jpg)
+![SQL](./images/2a.jpg)
+
+
 
 ### 3. Which region generates the highest sales and profits?
 
