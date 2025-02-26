@@ -286,6 +286,7 @@ FROM orders
 GROUP BY discount
 ORDER BY discount;
 ```
+![SQL](./images/5a.jpg) ![ChartL](./images/PB11.jpg)
 
 -- Most discounted categories
 ```sql
