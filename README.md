@@ -228,6 +228,7 @@ These insights will help us tailor our marketing and sales strategies to maximiz
 
 ### 4. Which country and city bring in the highest sales and profits?
 
+Let's discover which countries are top performers and which need improvement.
 
 #### Top 10 countries' total sales and profits with their profit margins
 ```sql
@@ -245,6 +246,8 @@ LIMIT 10;
 ![ChartL](./images/PB7.jpg)
 ![SQL](./images/4a.jpg)
 
+The most profitable countries are the United States, China, and India, with high sales and profit margins. For example, China has a profit margin of 21.5%, indicating efficient operations. Boosting resources and customer service in these countries is essential.
+
 #### Bottom 10 countries' total sales and profits
 ```sql
 SELECT 
@@ -259,6 +262,8 @@ LIMIT 10;
 ```
 ![ChartL](./images/PB8.jpg)
 ![SQL](./images/4b.jpg)
+
+Conversely, our least profitable markets include Turkey, Nigeria, and the Netherlands, with significant losses. Nigeria, for instance, has a negative profit margin of -148.57%, making it the least profitable. For countries with low profit margins, it is crucial to conduct a market analysis to decide where it is worth developing further, as some of these markets may present substantial challenges. For instance, certain markets might not be strategic for further investment due to economic or market conditions. Therefore, thorough market analysis is necessary to make further decisions.
 
 #### Top 10 cities' total sales and profits with their profit margins
 ```sql
@@ -276,6 +281,7 @@ LIMIT 10;
 ![ChartL](./images/PB9.jpg)
 ![SQL](./images/4c.jpg)
 
+
 #### Bottom 10 cities' total sales and profits with their profit margins
 ```sql
 SELECT 
@@ -291,6 +297,8 @@ LIMIT 10;
 ```
 ![ChartL](./images/PB10.jpg)
 ![SQL](./images/4d.jpg)
+
+The top cities that we should focus on are New York City, Seattle, and San Salvador. New York City has a profit margin of 24.2%, showing substantial profitability. These cities are key markets and require optimized strategies. The bottom 3 cities are Lagos, Istanbul, and Philadelphia. Lagos, with a profit margin of -150.84%, indicates significant inefficiencies. Similar to our approach with countries, it is essential to analyze these cities' market conditions to determine the feasibility of improvement and potential investments.
 
 ### 5. What is the relationship between discount and sales, and what is the total discount per category?
 
