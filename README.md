@@ -201,10 +201,13 @@ ORDER BY total_sales DESC;
 ![ChartL](./images/PB5.jpg)
 ![SQL](./images/3a.jpg)
 
-We can observe that the Central region has the highest total sales and brings us the highest profits. The North region also demonstrates strong performance with a high profit margin. These two regions are definitely areas of interest if we want to maximize our profits and expand our business. The South region, while generating substantial revenue, has a comparatively lower profit margin, indicating potential areas for efficiency improvements.
+We can observe that the Central region has the highest total sales and brings us substantial profits. The North region also demonstrates strong performance with a high profit margin. These two regions are definitely areas of interest if we want to maximize our profits and expand our business. The South region, while generating substantial revenue, has a comparatively lower profit margin, indicating potential areas for efficiency improvements.
 
-Despite generating significant revenue, the Central region does not produce the same level of profit as some other regions. Therefore, the Central region should be closely monitored as we might consider reallocating resources to more profitable regions. When we look at profit margins, which measure a company’s profitability as the percentage of revenue kept as profit, it reveals that the North and Central regions are particularly effective. Despite generating almost half of the Central region's revenue, the North region maintains a high profit margin, showcasing efficient operations.
-By considering these insights, we can develop targeted strategies for each region, optimizing our overall performance.
+On the other hand, the Southeast Asia region, despite generating significant revenue, has a much lower profit margin. This region should be closely monitored as we might consider reallocating resources to more profitable areas. When we look at profit margins, which measure a company’s profitability as the percentage of revenue kept as profit, it reveals that the North and North Asia regions are particularly effective. Despite having lower total sales, these regions maintain high profit margins, showcasing efficient operations.
+
+While the other regions, such as Oceania, EMEA, Africa, Central Asia, West, East, and the Caribbean, show moderate performance, they do not require immediate attention. Our primary focus should be on the Central, North, South, and North Asia regions for optimizing overall performance.
+
+By considering these insights, we can develop targeted strategies for each region, maximizing our efficiency and profitability.
 
 #### Average Order Value (AOV) and Average Number of Products per Order by region
 ```sql
