@@ -201,6 +201,8 @@ FROM orders
 GROUP BY region
 ORDER BY average_order_value DESC;
 ```
+![SQL](./images/3b.jpg)
+![ChartL](./images/PB6.jpg)
 
 ### 4. Which country and city bring in the highest sales and profits?
 
