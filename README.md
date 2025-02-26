@@ -483,6 +483,7 @@ GROUP BY p.product_name
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
+![SQL](./images/8a.jpg) 
 
 -- Top 10 least profitable products
 ```sql
@@ -497,6 +498,7 @@ GROUP BY p.product_name
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
+![SQL](./images/8b.jpg) 
 
 ### 9. Which segment contributes the most to our profits and sales?
 
