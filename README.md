@@ -630,6 +630,7 @@ GROUP BY region
 ORDER BY average_delivery_time ASC;
 ```
 ![SQL](./images/12c.jpg) 
+
   -- Avg delivery time per  shipping mode
 ```sql
 SELECT 
@@ -639,6 +640,7 @@ FROM orders
 GROUP BY ship_mode
 ORDER BY avg_shipping_time DESC;
 ```
+
 ![SQL](./images/12d.jpg) 
 
 ## 5. Data Visualization
