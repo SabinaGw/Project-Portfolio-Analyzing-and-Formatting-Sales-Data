@@ -221,6 +221,10 @@ LIMIT 10;
 
 ```
 
+![SQL](./images/4a.jpg)
+![ChartL](./images/PB7.jpg)
+
+
 -- Bottom 10 countries' total sales and profits
 ```sql
 SELECT 
@@ -233,6 +237,9 @@ GROUP BY country
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
+
+![SQL](./images/4b.jpg)
+![ChartL](./images/PB8.jpg)
 
 -- Top 10 cities' total sales and profits with their profit margins
 ```sql
@@ -248,6 +255,9 @@ ORDER BY total_profit DESC
 LIMIT 10;
 ```
 
+![SQL](./images/4c.jpg)
+![ChartL](./images/PB9.jpg)
+
 -- Bottom 10 cities' total sales and profits with their profit margins
 ```sql
 SELECT 
@@ -261,6 +271,8 @@ GROUP BY country, city
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
+![SQL](./images/4d.jpg)
+![ChartL](./images/PB10.jpg)
 
 ### 5. What is the relationship between discount and sales, and what is the total discount per category?
 
