@@ -512,7 +512,7 @@ FROM orders
 GROUP BY segment
 ORDER BY total_profit DESC;
 ```
-
+![SQL](./images/9a.jpg) 
 ### 10. How many unique customers do we have in total, and how many are there per region and country?
 
 -- Total number of customers
@@ -521,6 +521,7 @@ SELECT
   COUNT(DISTINCT customer_id) AS total_customers
 FROM orders;
 ```
+![SQL](./images/10a.jpg) 
 
 -- Total customers per region
 ```sql
@@ -531,6 +532,7 @@ FROM orders
 GROUP BY region
 ORDER BY total_customers DESC;
 ```
+![SQL](./images/10b.jpg) 
 
 -- Top 10 countries with the most customers
 ```sql
@@ -542,6 +544,7 @@ GROUP BY country
 ORDER BY total_customers DESC
 LIMIT 10;
 ```
+![SQL](./images/10c.jpg) 
 
 -- Top 10 countries with the fewest customers
 ```sql
@@ -553,6 +556,7 @@ GROUP BY country
 ORDER BY total_customers ASC
 LIMIT 10;
 ```
+![SQL](./images/10d.jpg) 
 
 ### 11. Which customers bring the most profit?
 
