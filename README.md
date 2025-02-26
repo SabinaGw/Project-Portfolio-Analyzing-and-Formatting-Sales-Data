@@ -210,6 +210,7 @@ While the other regions, such as Oceania, EMEA, Africa, Central Asia, West, East
 By considering these insights, we can develop targeted strategies for each region, maximizing our efficiency and profitability.
 
 #### Average Order Value (AOV) and Average Number of Products per Order by region
+Now, let's perform an analysis of the average order value and the average number of products per order by region. This will help us identify patterns and areas for improvement in our sales strategy.
 ```sql
 SELECT
   region,
@@ -221,6 +222,9 @@ ORDER BY average_order_value DESC;
 ```
 ![ChartL](./images/PB6.jpg)
 ![SQL](./images/3b.jpg)
+
+Based on the above results, we can see that North Asia and Central Asia show high average order values, which could be further leveraged with targeted promotions. In contrast, EMEA and Africa present opportunities to increase both order values and the number of products per order through strategic initiatives.
+These insights will help us tailor our marketing and sales strategies to maximize performance across different regions.
 
 ### 4. Which country and city bring in the highest sales and profits?
 
