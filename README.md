@@ -286,7 +286,8 @@ FROM orders
 GROUP BY discount
 ORDER BY discount;
 ```
-![SQL](./images/5a.jpg) ![ChartL](./images/PB11.jpg)
+![SQL](./images/5a.jpg) 
+![ChartL](./images/PB11.jpg)
 
 -- Most discounted categories
 ```sql
@@ -299,6 +300,8 @@ ON o.product_id = p.product_id
 GROUP BY category
 ORDER BY total_discount DESC;
 ```
+![SQL](./images/5b.jpg) 
+![ChartL](./images/PB12.jpg)
 
 -- Most discounted subcategories
 ```sql
@@ -311,6 +314,8 @@ ON o.product_id = p.product_id
 GROUP BY p.sub_category
 ORDER BY total_discount DESC;
 ```
+![SQL](./images/5c.jpg) 
+![ChartL](./images/PB13.jpg)
 
 ### 6. Which category generates the highest sales and profits in each region and country?
 
