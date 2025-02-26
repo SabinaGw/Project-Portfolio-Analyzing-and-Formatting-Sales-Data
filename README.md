@@ -594,6 +594,7 @@ SELECT
 FROM orders;
 ```
 ![SQL](./images/12a.jpg) 
+
 -- Calculate delivery time and percentage of total orders
 ```sql
 WITH delivery AS (
