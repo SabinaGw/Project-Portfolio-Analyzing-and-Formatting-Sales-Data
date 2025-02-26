@@ -129,7 +129,7 @@ The following output is produced by the above code:
 
 ![Query Results SQL](./images/1.jpg)
 
-The results shows a consistent increase in both sales and profits from 2011 to 2014. Sales grew from 2250.94K in 2011 to 4276.7K in 2014, while profits rose from 247.13K in 2011 to 498.17K in 2014. This indicates a steady improvement in Superstore financial performance over the years.
+The results show a consistent increase in both sales and profits from 2011 to 2014. Sales grew from 2250.94K in 2011 to 4276.7K in 2014, while profits rose from 247.13K in 2011 to 498.17K in 2014. This indicates a steady improvement in Superstore financial performance over the years.
 
 ![ChartL](./images/PB1.jpg)
 
