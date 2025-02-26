@@ -114,7 +114,7 @@ WHERE orders.quantity IS NULL;
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total)
 
 ### 1. What are the total sales and total profits for each year?
-Total sales and profits per year
+##### Total sales and profits per year
    
 ```sql
  SELECT 
@@ -132,7 +132,7 @@ Total sales and profits per year
 The data above shows a consistent increase in both sales and profits from 2011 to 2014. Sales grew from 2250.94K in 2011 to 4276.7K in 2014, while profits rose from 247.13K in 2011 to 498.17K in 2014. This indicates a steady improvement in Superstore financial performance over the years.
 
 ### 2. What are the total sales and total profits per quarter?
-Total sales and profits per quarter
+##### Total sales and profits per quarter
 
 ```sql
 SELECT 
@@ -148,7 +148,7 @@ ORDER BY revenue_year DESC, revenue_quarter DESC;
 ![SQL](./images/2a.jpg)
 ![ChartL](./images/PB2.jpg)
 
-Best performing quarters from 2011-2014
+##### Best performing quarters from 2011-2014
 
 ```sql
 WITH cte AS (
