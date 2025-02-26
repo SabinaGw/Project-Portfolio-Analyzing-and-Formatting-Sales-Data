@@ -401,17 +401,25 @@ ORDER BY total_profit DESC;
 
 #### Subcategories with the highest total sales and profits in each region
 ```sql
+WITH ranked_categories AS (
+  SELECT
+    o.region,
+    p.sub_category,
+    ROUND(SUM(o.sales), 2) AS total_sales,
+    ROUND(SUM(o.profit), 2) AS total_profit,
+    ROW_NUMBER() OVER (PARTITION BY o.region ORDER BY SUM(o.profit) DESC) AS profit_rank
+  FROM orders AS o
+  LEFT JOIN products AS p 
+  ON o.product_id = p.product_id
+  GROUP BY o.region, p.sub_category
+)
 SELECT 
-  o.region,
-  p.sub_category,
-  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
-  ROUND(SUM(o.profit), 2) AS total_profit
-FROM orders AS o
-LEFT JOIN products AS p 
-ON o.product_id = p.product_id
-GROUP BY p.sub_category, o.region
-ORDER BY total_profit DESC
-LIMIT 10;
+  region,
+  sub_category,
+  total_sales,
+  total_profit
+FROM ranked_categories
+WHERE profit_rank = 1;
 ```
 
 ![SQL](./images/7b.jpg) 
