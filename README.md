@@ -570,6 +570,7 @@ GROUP BY customer_id
 HAVING COUNT(*) > 1
 ORDER BY purchase_count DESC;
 ```
+![SQL](./images/11a.jpg) 
 
 -- Top 10 customers who generated the most sales compared to total profits
 ```sql
@@ -582,6 +583,7 @@ GROUP BY customer_id
 ORDER BY total_sales DESC
 LIMIT 10;
 ```
+![SQL](./images/11b.jpg) 
 
 ### 12. What is the average delivery time per class and in total?
 
@@ -591,6 +593,7 @@ SELECT
   AVG(DATEDIFF(ship_date, order_date)) AS delivery_time
 FROM orders;
 ```
+![SQL](./images/12a.jpg) 
 -- Calculate delivery time and percentage of total orders
 ```sql
 WITH delivery AS (
@@ -613,6 +616,8 @@ FROM delivery
 GROUP BY delivery_time
 ORDER BY delivery_time DESC;
 ```
+![SQL](./images/12b.jpg) 
+
 -- Avg delivery time and standard deviation per region
 ```sql
 SELECT 
@@ -623,6 +628,7 @@ FROM orders
 GROUP BY region
 ORDER BY average_delivery_time ASC;
 ```
+![SQL](./images/12c.jpg) 
   -- Avg delivery time per  shipping mode
 ```sql
 SELECT 
@@ -632,6 +638,7 @@ FROM orders
 GROUP BY ship_mode
 ORDER BY avg_shipping_time DESC;
 ```
+![SQL](./images/12d.jpg) 
 
 ## 5. Data Visualization
 #### Tool: PowerBI
