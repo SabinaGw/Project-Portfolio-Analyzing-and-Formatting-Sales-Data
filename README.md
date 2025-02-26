@@ -114,7 +114,7 @@ WHERE orders.quantity IS NULL;
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total)
 
 ### 1. What are the total sales and total profits for each year?
-### Total sales and profits per year
+#### * Total sales and profits per year
 We can observe data for 2011, 2012, 2013, and 2014 based on grouping by year from the order dates.
 ```sql
  SELECT 
@@ -127,6 +127,7 @@ We can observe data for 2011, 2012, 2013, and 2014 based on grouping by year fro
 ```
 
 ![ChartL](./images/PB1.jpg)
+
 
 The following output is produced by the above code:
 
