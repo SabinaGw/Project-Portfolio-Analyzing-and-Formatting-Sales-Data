@@ -114,7 +114,7 @@ WHERE orders.quantity IS NULL;
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total)
 
 ### 1. What are the total sales and total profits for each year?
-#### - Total sales and profits per year
+#### Total sales and profits per year
 We can observe data for 2011, 2012, 2013, and 2014 based on grouping by year from the order dates.
 ```sql
  SELECT 
@@ -136,8 +136,9 @@ The results show a consistent increase in both sales and profits from 2011 to 20
 
 
 ### 2. What are the total sales and total profits per quarter?
+Let's examine the total sales and profits per quarter. This analysis helps identify the periods when our company has had the most significant impact. By doing this, we can tailor our future operations to maximize our resources, such as advertising, customer service, and overall presence during those times of the year.
+
 #### Best performing quarters from 2011-2014
-Let's analyze the total sales and profits per quarter, as demonstrated by the code below:
 ```sql
 WITH cte AS (
   SELECT 
@@ -165,7 +166,7 @@ ORDER BY revenue_quarter DESC;
 ![SQL](./images/2b.jpg)
 The results shown above can help us understand which quarters were the most profitable from 2011 to 2014, aiding in planning business areas like marketing, inventory levels, and optimizing human resources during peak periods. This can also pave the way for strategic investments.
 
-#### - Total sales and profits per quarter
+#### Total sales and profits per quarter
 
 ```sql
 SELECT 
@@ -181,6 +182,7 @@ ORDER BY revenue_year DESC, revenue_quarter DESC;
 ![ChartL](./images/PB2.jpg)
 ![SQL](./images/2a.jpg)
 
+The data reveals that the fourth quarter, encompassing October, November, and December, is our peak period for sales and profits. By analyzing this data, we can develop effective operational strategies, noting the clear buildup from January to December, followed by a dip in the first three months of the year.
 
 
 ### 3. Which region generates the highest sales and profits?
