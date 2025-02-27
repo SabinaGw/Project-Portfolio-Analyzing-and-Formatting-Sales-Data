@@ -377,7 +377,7 @@ These discounts are spread across various subcategories, with Binders and Storag
 To gain a deeper understanding, let's examine the sales and profits for Binders and other discounted products. After that, we'll shift our attention to the categories based on different regions and countries.
 
 ### 6. Which category generates the highest sales and profits in each region and country?
-
+Before we analyze how it looks in countries and regions, let's see the overall view.
 #### Categories with their total sales, profits, and profit margins
 ```sql
 SELECT 
@@ -393,6 +393,8 @@ ORDER BY total_profit DESC;
 ```
 ![ChartL](./images/PB14.jpg)
 ![SQL](./images/6a.jpg) 
+This data indicates that while Technology generates the highest sales and profit margins, Furniture, although having significant sales, yields the lowest profit margin. Office Supplies, on the other hand, maintains a consistent profit margin close to Technology.
+Let's dive further by examining how this looks across different regions.
 
 #### Highest total sales and profits per category in each region
 ```sql
