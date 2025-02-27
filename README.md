@@ -393,7 +393,8 @@ ORDER BY total_profit DESC;
 ```
 ![ChartL](./images/PB14.jpg)
 ![SQL](./images/6a.jpg) 
-This data indicates that while Technology generates the highest sales and profit margins, Furniture, although having significant sales, yields the lowest profit margin. Office Supplies, on the other hand, maintains a consistent profit margin close to Technology.
+
+While Technology generates the highest sales and profit margins, Furniture, although having significant sales, yields the lowest profit margin. Office Supplies, on the other hand, maintains a consistent profit margin close to Technology.
 Let's dive further by examining how this looks across different regions.
 
 #### Highest total sales and profits per category in each region
