@@ -339,7 +339,7 @@ FROM stats;
 
 From the data, it seems that for each discount point, the average sales vary significantly.
 They almost have no linear relationship, as indicated by the correlation coefficient of approximately 0.075  and the shape of the graph.
-However, we can observe that at discount points of 35%, 37%, and 55%, our average sales are the highest. This might be due to psychological factors or simply because the right product category is being discounted.
+However, we can observe that at discount points of 7%, 35%, 55% and 57% our average sales are the highest. This might be due to psychological factors or simply because the right product category is being discounted.
 
 #### Most discounted categories
 ```sql
