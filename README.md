@@ -302,7 +302,7 @@ The top cities that we should focus on are New York City, Seattle, and San Salva
 
 ### 5. What is the relationship between discount and sales, and what is the total discount per category?
 
-
+First, let’s examine the correlation between discount and average sales to understand how one affects the other.
 #### Discount vs Avg Sales
 ```sql
 SELECT 
@@ -314,6 +314,10 @@ ORDER BY discount;
 ```
 ![ChartL](./images/PB11.jpg)
 ![SQL](./images/5a.jpg) 
+
+From the data, it seems that for each discount point, the average sales vary significantly.
+They almost have no linear relationship, as indicated by the correlation coefficient of approximately 0.075 (calculated in MySQL) and the shape of the graph.
+However, we can observe that at discount points of 35%, 37%, and 55%, our average sales are the highest. This might be due to psychological factors or simply because the right product category is being discounted.
 
 #### Most discounted categories
 ```sql
