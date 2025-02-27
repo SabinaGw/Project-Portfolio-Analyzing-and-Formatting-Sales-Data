@@ -372,6 +372,10 @@ ORDER BY total_discount DESC;
 ![ChartL](./images/PB13.jpg)
 ![SQL](./images/5c.jpg) 
 
+The chart clearly shows that Binders receive the highest discounts, followed by Storage and Art. Notable discounts are also seen in Phones, Chairs, and Paper.
+These discounts are spread across various subcategories, with Binders and Storage standing out. This could indicate a strategic focus on promoting these items.
+To gain a deeper understanding, let's examine the sales and profits for Binders and other discounted products. After that, we'll shift our attention to the categories based on different regions and countries.
+
 ### 6. Which category generates the highest sales and profits in each region and country?
 
 #### Categories with their total sales, profits, and profit margins
