@@ -315,8 +315,30 @@ ORDER BY discount;
 ![ChartL](./images/PB11.jpg)
 ![SQL](./images/5a.jpg) 
 
+#### Correlation
+```sql
+WITH stats AS (
+    SELECT 
+        discount,
+        AVG(sales) AS Avg_Sales,
+        COUNT(*) AS n,
+        SUM(discount) AS sum_x,
+        SUM(AVG(sales)) OVER() AS sum_y,
+        SUM(discount * AVG(sales)) OVER() AS sum_xy,
+        SUM(discount * discount) AS sum_xx,
+        SUM(AVG(sales) * AVG(sales)) OVER() AS sum_yy
+    FROM orders
+    GROUP BY discount
+)
+SELECT 
+    (SUM(n) * SUM(sum_xy) - SUM(sum_x) * SUM(sum_y)) / 
+    SQRT((SUM(n) * SUM(sum_xx) - SUM(sum_x) * SUM(sum_x)) * 
+         (SUM(n) * SUM(sum_yy) - SUM(sum_y) * SUM(sum_y))) AS correlation_coefficient
+FROM stats;
+```
+
 From the data, it seems that for each discount point, the average sales vary significantly.
-They almost have no linear relationship, as indicated by the correlation coefficient of approximately 0.075 (calculated in MySQL) and the shape of the graph.
+They almost have no linear relationship, as indicated by the correlation coefficient of approximately 0.075  and the shape of the graph.
 However, we can observe that at discount points of 35%, 37%, and 55%, our average sales are the highest. This might be due to psychological factors or simply because the right product category is being discounted.
 
 #### Most discounted categories
