@@ -432,6 +432,8 @@ LIMIT 20;
 ```
 ![SQL](./images/6c.jpg) 
 
+Our analysis reveals that the United States leads in both Technology and Office Supplies, demonstrating the strongest performance overall.
+
 #### Lowest total sales and profits per category in each country
 ```sql
 SELECT 
@@ -448,6 +450,8 @@ ORDER BY total_profit ASC
 LIMIT 20;
 ```
 ![SQL](./images/6d.jpg) 
+
+Our biggest losses are in Turkey and Nigeria across all categories. Let's take a closer look at how this plays out in the subcategories.
 
 
 ### 7. Which subcategory generates the highest sales and profits in each region and country?
