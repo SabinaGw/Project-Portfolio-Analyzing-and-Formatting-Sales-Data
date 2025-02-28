@@ -530,9 +530,10 @@ LIMIT 20;
 ```
 ![SQL](./images/7d.jpg) 
 
-The United States is our top country, followed by China.
+The United States dominates the list, particularly with subcategories like Copiers, Phones, and Accessories, achieving the highest profits. China follows with significant profits in Copiers and Bookcases, while India shows strong performance in Phones. This indicates that the US market is currently the most lucrative across various subcategories.
 
 #### Lowest total sales and profits per subcategory in each country
+Let’s see the lowest sales and profits:
 ```sql
 SELECT 
   o.country,
@@ -549,8 +550,7 @@ LIMIT 20;
 
 ![SQL](./images/7e.jpg) 
 
-
-Let’s see the lowest sales and profits. Still in order for the biggest loss in profits. Tables are our biggest losses in the USA, so we should observe and rethink our strategies in those areas. Expect of that Turkey and Nigeria look like they run our most losses. 
+ Still in order for the biggest loss in profits. Tables are our biggest losses in the USA, so we should observe and rethink our strategies in those areas. Expect of that Turkey and Nigeria look like they run our most losses. 
 
 ### 8. What are the names of the most and least profitable products?
 
