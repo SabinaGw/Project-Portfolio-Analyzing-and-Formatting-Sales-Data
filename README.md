@@ -427,7 +427,8 @@ FROM orders AS o
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
 GROUP BY o.country, p.category
-ORDER BY total_profit DESC;
+ORDER BY total_profit DESC
+LIMIT 20;
 ```
 ![SQL](./images/6c.jpg) 
 
@@ -443,7 +444,8 @@ FROM orders AS o
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
 GROUP BY o.country, p.category
-ORDER BY total_profit ASC;
+ORDER BY total_profit ASC
+LIMIT 20;
 ```
 ![SQL](./images/6d.jpg) 
 
