@@ -472,6 +472,9 @@ ORDER BY total_profit DESC;
 Based on the provided data, our biggest profits come from Copiers, Phones, and Accessories. The profits and profit margins on Copiers and Phones, in particular, are promising for the long run. Our losses come from Tables, where we are unable to break even. This subcategory should be further reviewed as sales are present, but we cannot generate profits from them.
 
 #### Subcategories with the highest total sales and profits in each region
+
+Now let’s have a look at the highest total sales and total profits per subcategory in each region:
+
 ```sql
 SELECT 
   p.sub_category,
@@ -487,7 +490,12 @@ LIMIT 20;
 
 ![SQL](./images/7b.jpg) 
 
+ These above display the best subcategories per region. The best subcategories when it comes to sales and profit are Phones in the Central Region.
+
 #### Subcategories with the lowest total sales and profits in each region
+
+Now let’s see the least performing ones: 
+
 ```sql
 SELECT 
   p.sub_category,
@@ -501,6 +509,10 @@ ORDER BY total_profit ASC
 LIMIT 20;
 ```
 ![SQL](./images/7c.jpg) 
+
+
+Tables are our biggest losses in profits in the South, Central, Southeast Asia, East, and North Asia. Next, let’s see the highest total sales and total profits per subcategory in each country.
+
 
 #### Highest total sales and profits per subcategory in each country
 ```sql
@@ -518,6 +530,8 @@ LIMIT 20;
 ```
 ![SQL](./images/7d.jpg) 
 
+The United States is our top country, followed by China.
+
 #### Lowest total sales and profits per subcategory in each country
 ```sql
 SELECT 
@@ -534,6 +548,9 @@ LIMIT 20;
 ```
 
 ![SQL](./images/7e.jpg) 
+
+
+Let’s see the lowest sales and profits. Still in order for the biggest loss in profits. Tables are our biggest losses in the USA, so we should observe and rethink our strategies in those areas. Expect of that Turkey and Nigeria look like they run our most losses. 
 
 ### 8. What are the names of the most and least profitable products?
 
