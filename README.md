@@ -402,8 +402,7 @@ SELECT
   o.region,
   p.category,
   ROUND(SUM(o.sales), 2) AS total_sales,
-  ROUND(SUM(o.profit), 2) AS total_profit,
-  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -413,7 +412,7 @@ ORDER BY total_profit DESC;
 
 ![SQL](./images/6b.jpg) 
 
-Analyzing the provided data, it's evident that Technology and Office Supplies lead in total sales and profits across most regions. The West region excels with Office Supplies and Technology being top categories for total profits, while the East also shows strong performance in Technology. Conversely, the Central region struggles with Furniture, operating at a loss, with the Southeast Asia region faring the worst in this category.
+Technology and Office Supplies lead in total sales and profits across most regions. The West region excels with Office Supplies and Technology being top categories for total profits, while the East also shows strong performance in Technology. Conversely, the Central region struggles with Furniture, operating at a loss, with the Southeast Asia region faring the worst in this category.
 
 #### Highest total sales and profits per category in each country
 ```sql
@@ -421,8 +420,7 @@ SELECT
   o.country,
   p.category,
   ROUND(SUM(o.sales), 2) AS total_sales,
-  ROUND(SUM(o.profit), 2) AS total_profit,
-  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -440,8 +438,7 @@ SELECT
   o.country,
   p.category,
   ROUND(SUM(o.sales), 2) AS total_sales,
-  ROUND(SUM(o.profit), 2) AS total_profit,
-  ROUND(SUM(o.profit) / SUM(o.sales) * 100, 2) AS profit_margin
+  ROUND(SUM(o.profit), 2) AS total_profit
 FROM orders AS o 
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
@@ -469,7 +466,7 @@ ON o.product_id = p.product_id
 GROUP BY p.sub_category
 ORDER BY total_profit DESC;
 ```
-
+![ChartL](./images/PB15.jpg)
 ![SQL](./images/7a.jpg) 
 
 #### Subcategories with the highest total sales and profits in each region
