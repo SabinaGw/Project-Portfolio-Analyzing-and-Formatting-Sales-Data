@@ -469,27 +469,20 @@ ORDER BY total_profit DESC;
 ![ChartL](./images/PB15.jpg)
 ![SQL](./images/7a.jpg) 
 
+Based on the provided data, our biggest profits come from Copiers, Phones, and Accessories. The profits and profit margins on Copiers and Phones, in particular, are promising for the long run. Our losses come from Tables, where we are unable to break even. This subcategory should be further reviewed as sales are present, but we cannot generate profits from them.
+
 #### Subcategories with the highest total sales and profits in each region
 ```sql
-WITH ranked_categories AS (
-  SELECT
-    o.region,
-    p.sub_category,
-    ROUND(SUM(o.sales), 2) AS total_sales,
-    ROUND(SUM(o.profit), 2) AS total_profit,
-    ROW_NUMBER() OVER (PARTITION BY o.region ORDER BY SUM(o.profit) DESC) AS profit_rank
-  FROM orders AS o
-  LEFT JOIN products AS p 
-  ON o.product_id = p.product_id
-  GROUP BY o.region, p.sub_category
-)
 SELECT 
-  region,
-  sub_category,
-  total_sales,
-  total_profit
-FROM ranked_categories
-WHERE profit_rank = 1;
+  p.sub_category,
+  ROUND(SUM(o.sales - o.discount), 2) AS total_sales,
+  ROUND(SUM(o.profit), 2) AS total_profit
+FROM orders AS o
+LEFT JOIN products AS p 
+ON o.product_id = p.product_id
+GROUP BY p.sub_category
+ORDER BY total_profit DESC
+LIMIT 20;
 ```
 
 ![SQL](./images/7b.jpg) 
@@ -505,7 +498,7 @@ LEFT JOIN products AS p
 ON o.product_id = p.product_id
 GROUP BY p.sub_category
 ORDER BY total_profit ASC
-LIMIT 10;
+LIMIT 20;
 ```
 ![SQL](./images/7c.jpg) 
 
@@ -521,7 +514,7 @@ LEFT JOIN products AS p
 ON o.product_id = p.product_id
 GROUP BY p.sub_category, o.country
 ORDER BY total_profit DESC
-LIMIT 10;
+LIMIT 20;
 ```
 ![SQL](./images/7d.jpg) 
 
@@ -536,7 +529,8 @@ FROM orders AS o
 LEFT JOIN products AS p 
 ON o.product_id = p.product_id
 GROUP BY p.sub_category, o.country
-ORDER BY total_profit ASC;
+ORDER BY total_profit ASC
+LIMIT 20;
 ```
 
 ![SQL](./images/7e.jpg) 
