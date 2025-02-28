@@ -550,7 +550,7 @@ LIMIT 20;
 
 ![SQL](./images/7e.jpg) 
 
- Still in order for the biggest loss in profits. Tables are our biggest losses in the USA, so we should observe and rethink our strategies in those areas. Expect of that Turkey and Nigeria look like they run our most losses. 
+The subcategories causing the most losses are Tables, Phones, and Bookcases. These losses are particularly significant in the United States, Turkey, and Nigeria, where all categories are facing substantial negative profits. By identifying these problematic subcategories and regions, we can focus our efforts on developing strategies to mitigate these losses and improve overall profitability.
 
 ### 8. What are the names of the most and least profitable products?
 
