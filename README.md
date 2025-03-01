@@ -621,8 +621,10 @@ SELECT
 FROM orders;
 ```
 ![SQL](./images/10a.jpg) 
+We’ve had 1590 customers between 2011 and 2014.
 
 -- Total customers per region
+
 ```sql
 SELECT 
   region, 
@@ -632,6 +634,7 @@ GROUP BY region
 ORDER BY total_customers DESC;
 ```
 ![SQL](./images/10b.jpg) 
+ Regionally, we had the following
 
 #### Top 10 countries with the most customers
 ```sql
