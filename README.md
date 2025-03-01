@@ -602,7 +602,9 @@ FROM orders
 GROUP BY segment
 ORDER BY total_profit DESC;
 ```
+![ChartL](./images/PB9a.jpg)
 ![SQL](./images/9a.jpg) 
+
 ### 10. How many unique customers do we have in total, and how many are there per region and country?
 
 #### Total number of customers
