@@ -188,6 +188,9 @@ Let's now take a look at how sales and profits are distributed across the differ
 ### 3. Which region generates the highest sales and profits?
 
 #### Total sales, profits, and profit margins by region
+
+This can be verified with the help of the following query:
+
 ```sql
 SELECT 
   region, 
@@ -454,6 +457,8 @@ Our biggest losses are in Turkey and Nigeria across all categories. Let's take a
 ### 7. Which subcategory generates the highest sales and profits in each region and country?
 
 #### Subcategories with their total sales, profits, and profit margins
+
+This question can be answered with the following query: 
 ```sql
 SELECT 
   p.sub_category,
@@ -593,6 +598,7 @@ On the other hand, the least profitable products include 3D printers, cordless p
 ### 9. Which segment contributes the most to our profits and sales?
 
 #### Segments ordered by total profits
+Let's verify this with the following query:
 ```sql
 SELECT 
   segment, 
@@ -605,6 +611,7 @@ ORDER BY total_profit DESC;
 ![ChartL](./images/PB9a.jpg)
 ![SQL](./images/9a.jpg) 
 
+ The Consumer segment generates the highest profit, followed by the Corporate segment, and lastly the Home Office segment. Let's proceed.
 ### 10. How many unique customers do we have in total, and how many are there per region and country?
 
 #### Total number of customers
