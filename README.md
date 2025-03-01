@@ -634,7 +634,8 @@ GROUP BY region
 ORDER BY total_customers DESC;
 ```
 ![SQL](./images/10b.jpg) 
- Regionally, we had the following
+
+The central region had the highest number of customers. The discrepancy from the total of 1590 is due to customer migration between regions. And how does it look in individual countries?
 
 #### Top 10 countries with the most customers
 ```sql
@@ -659,6 +660,7 @@ ORDER BY total_customers ASC
 LIMIT 10;
 ```
 ![SQL](./images/10d.jpg) 
+
 
 ### 11. Which customers bring the most profit?
 
