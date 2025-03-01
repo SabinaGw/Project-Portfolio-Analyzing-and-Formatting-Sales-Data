@@ -661,6 +661,7 @@ LIMIT 10;
 ```
 ![SQL](./images/10d.jpg) 
 
+The United States and France have the highest number of customers, indicating strong and stable markets, with Mexico, Australia, and Germany also being key regions. Conversely, countries like Chad and Eritrea show minimal customer numbers, highlighting potential challenges. Focusing on successful markets and analyzing weaker ones can optimize strategies.
 
 ### 11. Which customers bring the most profit?
 
