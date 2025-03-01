@@ -1,4 +1,4 @@
-# Project-Portfolio-Analyzing-and-Formatting-Superstore-Sales-Data
+![image](https://github.com/user-attachments/assets/6062d7b0-733d-4c6b-adb5-cc0392a5978e)# Project-Portfolio-Analyzing-and-Formatting-Superstore-Sales-Data
 
 ## Project Description
 This project involves reformatting and analyzing Superstore sales data to answer critical business questions while addressing issues such as incorrect data types and missing values. The primary goal is to extract actionable insights that can inform business strategies and enhance overall performance.
@@ -109,7 +109,7 @@ WHERE orders.quantity IS NULL;
 
 [10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country)
 
-[11. Which customers bring the most profit? ](#11-Which-customers-bring-the-most-profit)
+[11. Customer rewards program: Which customers bring the most profit?](#11-Which-customers-bring-the-most-profit)
 
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total)
 
@@ -663,7 +663,7 @@ LIMIT 10;
 
 The United States and France have the highest number of customers, indicating strong and stable markets, with Mexico, Australia, and Germany also being key regions. Conversely, countries like Chad and Eritrea show minimal customer numbers, highlighting potential challenges. Focusing on successful markets and analyzing weaker ones can optimize strategies.
 
-### 11. Which customers bring the most profit?
+### 11. Customer rewards program: Which customers bring the most profit?
 
 #### Identify repeat purchases by customers
 ```sql
