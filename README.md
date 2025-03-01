@@ -689,6 +689,8 @@ LIMIT 10;
 ```
 ![SQL](./images/11b.jpg) 
 
+By identifying which customers spend the most and generate the highest sales, we can focus on providing more value to them, so building a loyalty and rewards program can be a great idea. It’s always cheaper to retain existing customers than to acquire new ones, so let's also examine total profits for deeper insights. What we find is quite revealing. For instance, customer ID ‘SM-20320’ has the highest spending, but isn’t generating profit, yet rewarding their loyalty is still essential. Meanwhile, customer ID ‘TC-20980’ is not only a top spender but also the most profitable. By appreciating and retaining these top customers, we ensure continued success.
+
 ### 12. What is the average delivery time per class and in total?
 
 #### Average delivery time
