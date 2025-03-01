@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/6062d7b0-733d-4c6b-adb5-cc0392a5978e)# Project-Portfolio-Analyzing-and-Formatting-Superstore-Sales-Data
 
 ## Project Description
 This project involves reformatting and analyzing Superstore sales data to answer critical business questions while addressing issues such as incorrect data types and missing values. The primary goal is to extract actionable insights that can inform business strategies and enhance overall performance.
