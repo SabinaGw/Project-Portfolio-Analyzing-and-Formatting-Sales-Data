@@ -692,7 +692,7 @@ LIMIT 10;
 By identifying high-spending customers, we can build a valuable loyalty and rewards program. Retaining existing customers is cheaper than acquiring new ones, so analyzing total profits is crucial. For example, customer ID ‘SM-20320’ spends a lot but isn’t profitable, yet their loyalty must be rewarded. Meanwhile, customer ID ‘TC-20980’ is the most profitable. By rewarding and retaining these top customers, we ensure their continued loyalty.
 
 ### 12. What is the average delivery time per class and in total?
-
+At the end, let's analyze delivery time using the following queries:
 #### Average delivery time
 ```sql
 SELECT 
@@ -748,6 +748,9 @@ ORDER BY avg_shipping_time DESC;
 ```
 
 ![SQL](./images/12d.jpg) 
+
+The standard deviation of around 1.75 indicates that delivery times are close to the average (3.9 days), showing consistency and stability in logistics across regions. Only two orders required delivery over 2 days. Since most orders are fulfilled within 1-5 days, focusing on this timeframe can enhance efficiency and customer satisfaction.
+Finally, it's time to see it all in the Power BI dashboard
 
 ## 5. Data Visualization
 #### Tool: PowerBI
