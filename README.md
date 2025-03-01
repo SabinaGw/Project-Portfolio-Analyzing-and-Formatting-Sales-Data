@@ -108,7 +108,7 @@ WHERE orders.quantity IS NULL;
 
 [10. How many unique customers do we have in total, and how many are there per region and country?](#10-How-many-unique-customers-do-we-have-in-total-and-how-many-are-there-per-region-and-country)
 
-[11. Customer rewards program: Which customers bring the most profit?](#11-Which-customers-bring-the-most-profit)
+[11. Customer rewards program: Which customers bring the most profit?](#11-Customer-rewards-program-Which-customers-bring-the-most-profit)
 
 [12. What is the average delivery time per class and in total?](#12-What-is-the-average-delivery-time-per-class-and-in-total)
 
