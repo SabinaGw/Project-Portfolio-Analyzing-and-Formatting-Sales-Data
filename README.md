@@ -476,7 +476,7 @@ ORDER BY total_profit DESC
 LIMIT 20;
 ```
 
-![SQL](./images/7b.jpg) 
+![Chart](./images/PB7b.jpg)
 
  These above display the best subcategories per region. The best subcategories when it comes to sales and profit are Phones in the Central Region.
 
@@ -496,7 +496,7 @@ GROUP BY p.sub_category
 ORDER BY total_profit ASC
 LIMIT 20;
 ```
-![SQL](./images/7c.jpg) 
+![Chart](./images/PB7c.jpg)
 
 
 Tables are our biggest losses in profits in the South, Central, Southeast Asia, East, and North Asia. Next, let’s see the highest total sales and total profits per subcategory in each country.
@@ -516,7 +516,7 @@ GROUP BY p.sub_category, o.country
 ORDER BY total_profit DESC
 LIMIT 20;
 ```
-![SQL](./images/7d.jpg) 
+![Chart](./images/PB7d.jpg)
 
 The United States dominates the list, particularly with subcategories like Copiers, Phones, and Accessories, achieving the highest profits. China follows with significant profits in Copiers and Bookcases, while India shows strong performance in Phones. This indicates that the US market is currently the most lucrative across various subcategories.
 
@@ -536,7 +536,7 @@ ORDER BY total_profit ASC
 LIMIT 20;
 ```
 
-![SQL](./images/7e.jpg) 
+![Chart](./images/PB7e.jpg)
 
 The subcategories causing the most losses are Tables, Phones, and Bookcases. These losses are particularly significant in the United States, Turkey, and Nigeria, where all categories are facing substantial negative profits. By identifying these problematic subcategories and regions, we can focus our efforts on developing strategies to mitigate these losses and improve overall profitability.
 
