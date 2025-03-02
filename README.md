@@ -297,7 +297,7 @@ First, let’s examine the correlation between discount and average sales to und
 ```sql
 SELECT 
   discount, 
-  ROUND(AVG(sales), 2) AS Avg_Sales
+  ROUND(AVG(sales), 2) AS avg_sales
 FROM orders
 GROUP BY discount
 ORDER BY discount;
