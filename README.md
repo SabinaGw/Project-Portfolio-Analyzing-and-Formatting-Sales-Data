@@ -130,10 +130,6 @@ The following output is produced by the above code:
 
 The results show a consistent increase in both sales and profits from 2011 to 2014. Sales grew from 2250.94K in 2011 to 4276.7K in 2014, while profits rose from 247.13K in 2011 to 498.17K in 2014. This indicates a steady improvement in Superstore financial performance over the years.
 
-
-
-
-
 ### 2. What are the total sales and total profits per quarter?
 Let's examine the total sales and profits per quarter. This analysis helps identify the periods when our company has had the most significant impact. By doing this, we can tailor our future operations to maximize our resources, such as advertising, customer service, and overall presence during those times of the year.
 
@@ -142,7 +138,7 @@ Let's examine the total sales and profits per quarter. This analysis helps ident
 WITH cte AS (
   SELECT 
     QUARTER(o.order_date) AS revenue_quarter,
-    ROUND(SUM(o.sales), 2) AS order_total 
+    ROUND(SUM(o.sales), 2) AS total_sales
   FROM orders AS o
   LEFT JOIN products AS p
   ON o.product_id = p.product_id
@@ -156,13 +152,12 @@ SELECT
     WHEN revenue_quarter = 3 THEN 'Q3'
     ELSE 'Q4'
   END AS quarters,
-  order_total 
+  total_sales
 FROM cte
 ORDER BY revenue_quarter DESC;
 ```
 
 ![ChartL](./images/PB4.jpg)
-![SQL](./images/2b.jpg)
 The results shown above can help us understand which quarters were the most profitable from 2011 to 2014, aiding in planning business areas like marketing, inventory levels, and optimizing human resources during peak periods. This can also pave the way for strategic investments.
 
 #### Total sales and profits per quarter
@@ -171,7 +166,7 @@ The results shown above can help us understand which quarters were the most prof
 SELECT 
     YEAR(o.order_date) AS revenue_year,
     QUARTER(o.order_date) AS revenue_quarter,
-    ROUND(SUM((o.sales)), 2) AS order_total 
+    ROUND(SUM((o.sales)), 2) AS total_sales
 FROM orders AS o
 LEFT JOIN products AS p
 ON o.product_id = p.product_id
