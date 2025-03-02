@@ -722,7 +722,7 @@ ORDER BY avg_delivery_time DESC;
 
 ![Chart](./images/PB12d.jpg)
 
-The standard deviation of around 1.75 indicates that delivery times are close to the average (3.9 days), showing consistency and stability in logistics across regions. Only two orders required delivery over 2 days. Since most orders are fulfilled within 1-5 days, focusing on this timeframe can enhance efficiency and customer satisfaction.
+The standard deviation of around 1.75 indicates that delivery times are close to the average (3.97 days), showing consistency and stability in logistics across regions. Only two orders required delivery over 2 days. Since most orders are fulfilled within 1-5 days, focusing on this timeframe can enhance efficiency and customer satisfaction.
 
 Finally, it's time to see it all in the Power BI dashboard.
 
