@@ -457,7 +457,7 @@ ORDER BY total_profit DESC;
 ```
 ![ChartL](./images/PB15.jpg)
 
-Based on the provided data, our biggest profits come from Copiers, Phones, and Accessories. The profits and profit margins on Copiers and Phones, in particular, are promising for the long run. Our losses come from Tables, where we are unable to break even. This subcategory should be further reviewed as sales are present, but we cannot generate profits from them.
+Our biggest profits come from Copiers, Phones, and Accessories. The profits and profit margins on Copiers and Phones, in particular, are promising for the long run. Our losses come from Tables, where we are unable to break even. This subcategory should be further reviewed as sales are present, but we cannot generate profits from them.
 
 #### Subcategories with the highest total sales and profits in each region
 
@@ -478,7 +478,7 @@ LIMIT 20;
 
 ![Chart](./images/PB7b.jpg)
 
- These above display the best subcategories per region. The best subcategories when it comes to sales and profit are Phones in the Central Region.
+The best subcategories when it comes to sales and profit are Phones in the Central Region.
 
 #### Subcategories with the lowest total sales and profits in each region
 
