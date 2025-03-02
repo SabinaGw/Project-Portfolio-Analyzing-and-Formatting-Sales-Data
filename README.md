@@ -591,7 +591,7 @@ FROM orders
 GROUP BY segment
 ORDER BY total_profit DESC;
 ```
-![ChartL](./images/PB9a.jpg)
+![Chart](./images/PB9a.jpg)
 
  The Consumer segment generates the highest profit, followed by the Corporate segment, and lastly the Home Office segment.
 ### 10. How many unique customers do we have in total, and how many are there per region and country?
@@ -602,7 +602,8 @@ SELECT
   COUNT(DISTINCT customer_id) AS total_customers
 FROM orders;
 ```
-![SQL](./images/10a.jpg) 
+![Chart](./images/PB10a.jpg)
+
 We’ve had 1590 customers between 2011 and 2014.
 
 -- Total customers per region
@@ -615,7 +616,7 @@ FROM orders
 GROUP BY region
 ORDER BY total_customers DESC;
 ```
-![SQL](./images/10b.jpg) 
+![Chart](./images/PB10b.jpg)
 
 The central region had the highest number of customers. The discrepancy from the total of 1590 is due to customer migration between regions. And how does it look in individual countries?
 
@@ -629,9 +630,9 @@ GROUP BY country
 ORDER BY total_customers DESC
 LIMIT 10;
 ```
-![SQL](./images/10c.jpg) 
+![Chart](./images/PB10c.jpg)
 
-#### Top 10 countries with the fewest customers
+#### Countries with the fewest customers
 ```sql
 SELECT 
   country, 
@@ -639,9 +640,9 @@ SELECT
 FROM orders
 GROUP BY country
 ORDER BY total_customers ASC
-LIMIT 10;
+LIMIT 20;
 ```
-![SQL](./images/10d.jpg) 
+![Chart](./images/PB10d.jpg)
 
 The United States and France have the highest number of customers, indicating strong and stable markets, with Mexico, Australia, and Germany also being key regions. Conversely, countries like Chad and Eritrea show minimal customer numbers, highlighting potential challenges. Focusing on successful markets and analyzing weaker ones can optimize strategies.
 
