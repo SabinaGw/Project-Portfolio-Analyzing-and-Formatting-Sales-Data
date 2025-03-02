@@ -158,6 +158,7 @@ ORDER BY revenue_quarter DESC;
 ```
 
 ![ChartL](./images/PB4.jpg)
+
 The results shown above can help us understand which quarters were the most profitable from 2011 to 2014, aiding in planning business areas like marketing, inventory levels, and optimizing human resources during peak periods. This can also pave the way for strategic investments.
 
 #### Total sales and profits per quarter
@@ -174,7 +175,6 @@ GROUP BY revenue_year, revenue_quarter
 ORDER BY revenue_year DESC, revenue_quarter DESC;
 ```
 ![ChartL](./images/PB2.jpg)
-![SQL](./images/2a.jpg)
 
 The data reveals that the fourth quarter, encompassing October, November, and December, is our peak period for sales and profits. By analyzing this data, we can develop effective operational strategies, noting the clear buildup from January to December, followed by a dip in the first three months of the year. 
 Let's now take a look at how sales and profits are distributed across the different regions.
