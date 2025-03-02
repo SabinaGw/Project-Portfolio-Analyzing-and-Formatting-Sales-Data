@@ -726,11 +726,11 @@ The standard deviation of around 1.75 indicates that delivery times are close to
 
 Finally, it's time to see it all in the Power BI dashboard.
 
-## 5. Data Visualization
+## Data Visualization
 #### Tool: PowerBI
 Interactive dashboard in PowerBI based on collected data
 
-## 6. Recommendations
+## Recommendations
 
 #### Findings and Recommendations:
 
