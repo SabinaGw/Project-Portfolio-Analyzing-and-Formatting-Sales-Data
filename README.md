@@ -196,7 +196,6 @@ GROUP BY region
 ORDER BY total_sales DESC;
 ```
 ![ChartL](./images/PB5.jpg)
-![SQL](./images/3a.jpg)
 
 We can observe that the Central region has the highest total sales and brings us substantial profits. The North region also demonstrates strong performance with a high profit margin. These two regions are definitely areas of interest if we want to maximize our profits and expand our business. The South region, while generating substantial revenue, has a comparatively lower profit margin, indicating potential areas for efficiency improvements.
 
@@ -218,7 +217,6 @@ GROUP BY region
 ORDER BY average_order_value DESC;
 ```
 ![ChartL](./images/PB6.jpg)
-![SQL](./images/3b.jpg)
 
 Based on the above results, we can see that North Asia and Central Asia show high average order values, which could be further leveraged with targeted promotions. In contrast, EMEA and Africa present opportunities to increase both order values and the number of products per order through strategic initiatives.
 These insights will help us tailor our marketing and sales strategies to maximize performance across different regions.
@@ -241,7 +239,6 @@ LIMIT 10;
 
 ```
 ![ChartL](./images/PB7.jpg)
-![SQL](./images/4a.jpg)
 
 The most profitable countries are the United States, China, and India, with high sales and profit margins. For example, China has a profit margin of 21.5%, indicating efficient operations. Boosting resources and customer service in these countries is essential.
 
@@ -258,7 +255,6 @@ ORDER BY total_profit ASC
 LIMIT 10;
 ```
 ![ChartL](./images/PB8.jpg)
-![SQL](./images/4b.jpg)
 
 Conversely, our least profitable markets include Turkey, Nigeria, and the Netherlands, with significant losses. Nigeria, for instance, has a negative profit margin of -148.57%, making it the least profitable. For countries with low profit margins, it is crucial to conduct a market analysis to decide where it is worth developing further, as some of these markets may present substantial challenges. For instance, certain markets might not be strategic for further investment due to economic or market conditions. Therefore, thorough market analysis is necessary to make further decisions.
 
@@ -276,8 +272,6 @@ ORDER BY total_profit DESC
 LIMIT 10;
 ```
 ![ChartL](./images/PB9.jpg)
-![SQL](./images/4c.jpg)
-
 
 #### Bottom 10 cities' total sales and profits with their profit margins
 ```sql
@@ -293,7 +287,6 @@ ORDER BY total_profit ASC
 LIMIT 10;
 ```
 ![ChartL](./images/PB10.jpg)
-![SQL](./images/4d.jpg)
 
 The top cities that we should focus on are New York City, Seattle, and San Salvador. New York City has a profit margin of 24.2%, showing substantial profitability. These cities are key markets and require optimized strategies. The bottom 3 cities are Lagos, Istanbul, and Philadelphia. Lagos, with a profit margin of -150.84%, indicates significant inefficiencies. Similar to our approach with countries, it is essential to analyze these cities' market conditions to determine the feasibility of improvement and potential investments.
 
