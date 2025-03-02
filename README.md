@@ -4,7 +4,7 @@ This project involves reformatting and analyzing Superstore sales data to answer
 
 The analysis will utilize a combination of Excel, SQL, and PowerBI, following a structured approach to ensure comprehensive and reliable results. The process will encompass six key parts of data analysis:
 
-* [Defining the Problems](#defining-the-problems)
+* [Defining the Problem](#defining-the-problem)
 * [Data Preparation](#data-preparation)
 * [Data Cleaning and Processing](#data-cleaning-and-processing)
 * [Data Analysis](#data-analysis) 
@@ -12,7 +12,7 @@ The analysis will utilize a combination of Excel, SQL, and PowerBI, following a 
 * [Recommendations](#recommendations)
 
   
-## Defining the Problems
+## Defining the Problem
 #### Which products, locations, and customer segments should the company focus on and which should it avoid to maximize profits?
 What trends are emerging and what recommendations can be made based on the analysis findings?
 
@@ -732,9 +732,7 @@ Interactive dashboard in PowerBI based on collected data
 
 ## Recommendations
 
-#### Findings and Recommendations:
-
-Based on the analyzed data, here are the key findings to ensure the success of Superstore.
+Based on the analyzed data, here are my key findings to ensure the success of Superstore.
 
 * Our profits and sales steadily increased over the analyzed quarters from 2011 to 2014. We should maintain this growth. Q4 is our most profitable quarter. To maximize profits, we need to ensure adequate stock and strengthen marketing and customer service from October to December.
 
