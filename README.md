@@ -399,7 +399,7 @@ ORDER BY total_profit DESC;
 
 ![ChartL](./images/PB6b.jpg)
 
-Technology leads in total sales and profits across most regions. The Central region excels with high sales and profits across all categories, with only Furniture generating similar high profits in North Asia as in Central. The Southeast Asia region fares the worst in the Furniture category, showing a loss. 
+Technology leads in total sales and profits across most regions. The Central region excels with high sales and profits across all categories, with only Furniture generating similar high profits in North Asia as in Central. Despite high sales, the Southeast Asia region fares the worst in the Furniture category, showing a loss. 
 
 #### Highest total sales and profits per category in each country
 ```sql
