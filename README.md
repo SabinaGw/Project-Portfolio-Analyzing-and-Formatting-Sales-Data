@@ -672,7 +672,7 @@ SELECT
   AVG(DATEDIFF(ship_date, order_date)) AS delivery_time
 FROM orders;
 ```
-![SQL](./images/12a.jpg) 
+![Chart](./images/PB12a.jpg)
 
 #### Calculate delivery time and percentage of total orders
 ```sql
@@ -696,31 +696,31 @@ FROM delivery
 GROUP BY delivery_time
 ORDER BY delivery_time DESC;
 ```
-![SQL](./images/12b.jpg) 
+![Chart](./images/PB12b.jpg)
 
 #### Avg delivery time and standard deviation per region
 ```sql
 SELECT 
   region,
   AVG(DATEDIFF(ship_date, order_date)) AS average_delivery_time,
-  STDDEV(DATEDIFF(ship_date, order_date)) AS stdev_delivery_time
+  STDDEV(DATEDIFF(ship_date, order_date)) AS stddev_delivery_time
 FROM orders
 GROUP BY region
 ORDER BY average_delivery_time ASC;
 ```
-![SQL](./images/12c.jpg) 
+![Chart](./images/PB12c.jpg)
 
 #### Avg delivery time per  shipping mode
 ```sql
 SELECT 
   ship_mode,
-  AVG(DATEDIFF(ship_date, order_date)) AS avg_shipping_time
+  AVG(DATEDIFF(ship_date, order_date)) AS avg_delivery_time
 FROM orders
 GROUP BY ship_mode
-ORDER BY avg_shipping_time DESC;
+ORDER BY avg_delivery_time DESC;
 ```
 
-![SQL](./images/12d.jpg) 
+![Chart](./images/PB12d.jpg)
 
 The standard deviation of around 1.75 indicates that delivery times are close to the average (3.9 days), showing consistency and stability in logistics across regions. Only two orders required delivery over 2 days. Since most orders are fulfilled within 1-5 days, focusing on this timeframe can enhance efficiency and customer satisfaction.
 
