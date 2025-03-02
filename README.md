@@ -648,17 +648,6 @@ The United States and France have the highest number of customers, indicating st
 
 ### 11. Customer rewards program: Which customers bring the most profit?
 
-#### Identify repeat purchases by customers
-```sql
-SELECT 
-  customer_id,
-  COUNT(*) AS purchase_count
-FROM orders
-GROUP BY customer_id
-HAVING COUNT(*) > 1
-ORDER BY purchase_count DESC;
-```
-![SQL](./images/11a.jpg) 
 
 #### Top 10 customers who generated the most sales compared to total profits
 ```sql
@@ -671,7 +660,7 @@ GROUP BY customer_id
 ORDER BY total_sales DESC
 LIMIT 10;
 ```
-![SQL](./images/11b.jpg) 
+![Chart](./images/PB11a.jpg)
 
 By identifying high-spending customers, we can build a valuable loyalty and rewards program. Retaining existing customers is cheaper than acquiring new ones, so analyzing total profits is crucial. For example, customer ID ‘SM-20320’ spends a lot but isn’t profitable, yet their loyalty must be rewarded. Meanwhile, customer ID ‘TC-20980’ is the most profitable. By rewarding and retaining these top customers, we ensure their continued loyalty.
 
