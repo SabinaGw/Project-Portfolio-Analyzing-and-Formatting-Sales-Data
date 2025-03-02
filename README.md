@@ -397,9 +397,9 @@ GROUP BY o.region, p.category
 ORDER BY total_profit DESC;
 ```
 
-![SQL](./images/6b.jpg) 
+![ChartL](./images/PB6b.jpg)
 
-Technology and Office Supplies lead in total sales and profits across most regions. The West region excels with Office Supplies and Technology being top categories for total profits, while the East also shows strong performance in Technology. Conversely, the Central region struggles with Furniture, operating at a loss, with the Southeast Asia region faring the worst in this category.
+Technology leads in total sales and profits across most regions. The Central region excels with high sales and profits across all categories, with only Furniture generating similar high profits in North Asia as in Central. The Southeast Asia region fares the worst in the Furniture category, showing a loss. 
 
 #### Highest total sales and profits per category in each country
 ```sql
