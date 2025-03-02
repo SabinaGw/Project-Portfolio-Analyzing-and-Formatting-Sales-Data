@@ -734,44 +734,24 @@ Interactive dashboard in PowerBI based on collected data
 
 #### Findings and Recommendations:
 
-Based on the analyzed data, here are the key findings to ensure the success of Superstore:
+Based on the analyzed data, here are the key findings to ensure the success of Superstore.
 
-* Overall Performance:
+* Our profits and sales steadily increased over the analyzed quarters from 2011 to 2014. We should maintain this growth. Q4 is our most profitable quarter. To maximize profits, we need to ensure adequate stock and strengthen marketing and customer service from October to December.
 
-Our profits and sales steadily increased over the analyzed quarters from 2011 to 2014. We should maintain this growth.
-Q4 is our most profitable quarter. To maximize profits, we need to ensure adequate stock and strengthen marketing and customer service from October to December.
+* The Central region has the highest total sales and brings us significant profits, generating at least $1,221.00 more in sales than the next highest region, the South. The South region, despite substantial revenue, has a relatively lower profit margin, indicating potential efficiency improvements. The North region also shows strong performance with a high-profit margin. These two regions (Central and North) are areas of interest if we want to maximize our profits and expand our business. Southeast Asia, despite high sales, has significantly lower profit margins. It might be more beneficial to redirect resources from this region to the Central region, where we are more profitable and can solidify our leadership. Regions like Oceania, EMEA, Africa, Central Asia, West, East, and the Caribbean show moderate performance and do not require immediate attention.
 
-* Regional Analysis:
+* The United States, China, and India are our most profitable markets in terms of sales and profit margins. We should focus more on these countries. Turkey, Nigeria, the Netherlands, the Philippines, and Honduras are our least profitable markets. Consider reducing our presence or closing stores in these countries.
 
-Central Region: This region has the highest total sales and brings us significant profits. It generates at least $1,221.00 more in sales than the next highest region, the South. The South region, despite substantial revenue, has a relatively lower profit margin, indicating potential efficiency improvements. The North region also shows strong performance with a high-profit margin. These two regions (Central and North) are areas of interest if we want to maximize our profits and expand our business.
-Southeast Asia: Despite high sales, this region has significantly lower profit margins. It might be more beneficial to redirect resources from this region to the Central region, where we are more profitable and can solidify our leadership.
-Moderate Performance Regions: Regions like Oceania, EMEA, Africa, Central Asia, West, East, and the Caribbean show moderate performance and do not require immediate attention.
+* New York, Los Angeles, and Seattle are our most profitable cities. It is easier to dominate a city than an entire country, so let's focus on these top cities. Two of the ten cities where we lose the most money are in Nigeria, indicating a need to reconsider our operations there. The better option would be to stop business in these cities.
 
-* Country Analysis:
+* Technology and Office Supplies bring the highest profits and have good profit margins. We should continue investing in them. Furniture still makes profits but has lower overall returns. We need to find ways to improve this category's performance.
 
-Profitable Markets: The United States, China, and India are our most profitable markets in terms of sales and profit margins. We should focus more on these countries.
-Unprofitable Markets: Turkey, Nigeria, the Netherlands, the Philippines, and Honduras are our least profitable markets. Consider reducing our presence or closing stores in these countries.
+* Office Supplies in the Central, North, and South regions bring the highest profits and should have increased availability. The same applies to Technology. Furniture in Southeast Asia does not generate profits, so redirecting these resources to the Central or North Asia regions would be better.
 
-Most Profitable Cities: New York, Los Angeles, and Seattle are our most profitable cities. It is easier to dominate a city than an entire country, so let's focus on these top cities. Two of the ten cities where we lose the most money are in Nigeria, indicating a need to reconsider our operations there. The better option would be to stop business in these cities.
+* Canon imageClass 2200 Advanced Copier, Cisco Smart Phone (Full Size), and Motorola Smart Phone (Full Size) are our most profitable products. We must always keep these in stock. Cubify CubeX 3D Printer Double Head Print, Lexmark MX611dhe Monochrome Laser Printer, and Motorola Smart Phones (Cordless) should be discontinued.
 
-* Category Analysis:
+* The consumer segment brings the most profit, followed by corporate and home office segments. We must focus more on the consumer segment, even if all three are profitable.
 
-Technology and Office Supplies: These categories bring the highest profits and have good profit margins. We should continue investing in them. Furniture still makes profits but has lower overall returns. We need to find ways to improve this category's performance.
-
-Regional Categories: Office Supplies in the Central, North, and South regions bring the highest profits and should have increased availability. The same applies to Technology. Furniture in Southeast Asia does not generate profits, so redirecting these resources to the Central or North Asia regions would be better.
-
-* Product Analysis:
-
-Most Profitable Products: Canon imageClass 2200 Advanced Copier, Cisco Smart Phone (Full Size), and Motorola Smart Phone (Full Size) are our most profitable products. We must always keep these in stock.
-Unprofitable Products: Cubify CubeX 3D Printer Double Head Print, Lexmark MX611dhe Monochrome Laser Printer, and Motorola Smart Phones (Cordless) should be discontinued.
-
-* Segment Analysis:
-
-The consumer segment brings the most profit, followed by corporate and home office segments. We must focus more on the consumer segment, even if all three are profitable.
-
-* Clientele Analysis:
-
-We have a total of 1,590 customers, with the most customers in the USA, France, and Mexico. California and New York are obvious areas where we need to excel.
-The standard deviation of around 1.75 indicates that delivery times are close to the average (3.97 days), showing consistency and stability in logistics across regions.
+* We have a total of 1,590 customers, with the most customers in the USA, France, and Mexico. California and New York are obvious areas where we need to excel. The standard deviation of around 1.75 indicates that delivery times are close to the average (3.97 days), showing consistency and stability in logistics across regions.
 
 Thank you for reviewing my analysis! I'm excited to invite you to explore my other portfolio projects.
