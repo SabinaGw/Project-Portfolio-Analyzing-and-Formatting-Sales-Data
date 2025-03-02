@@ -415,7 +415,7 @@ GROUP BY o.country, p.category
 ORDER BY total_profit DESC
 LIMIT 20;
 ```
-![SQL](./images/6c.jpg) 
+![ChartL](./images/PB6c.jpg)
 
 Our analysis reveals that the United States leads in both Technology and Office Supplies, demonstrating the strongest performance overall.
 
@@ -433,7 +433,7 @@ GROUP BY o.country, p.category
 ORDER BY total_profit ASC
 LIMIT 20;
 ```
-![SQL](./images/6d.jpg) 
+![ChartL](./images/PB6d.jpg)
 
 Our biggest losses are in Turkey and Nigeria across all categories. Let's take a closer look at how this plays out in the subcategories.
 
