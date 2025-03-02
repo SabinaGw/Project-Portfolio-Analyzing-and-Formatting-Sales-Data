@@ -557,7 +557,7 @@ GROUP BY p.product_name
 ORDER BY total_profit DESC
 LIMIT 10;
 ```
-![SQL](./images/8a.jpg) 
+![Chart](./images/PB8a.jpg)
 
 The most profitable products mainly include advanced copiers, smart phones, and office furniture, indicating strong demand and high profit margins in these categories. The Canon imageCLASS 2200 Advanced Copier, Cisco Smart Phone, and Motorola Smart Phone are the main foundations of our profits. These top-performing products are essential to maintain in our stock due to their significant contribution to our overall profitability.
 
@@ -574,7 +574,7 @@ GROUP BY p.product_name
 ORDER BY total_profit ASC
 LIMIT 10;
 ```
-![SQL](./images/8b.jpg) 
+![Chart](./images/PB8b.jpg)
 
 On the other hand, the least profitable products include 3D printers, cordless phones, and office tables, which may need further evaluation to understand the reasons behind their low profitability. The Cubify Cubex 3D Printer Double Head Print, Lexmark X1150 Inkjet Monochrome Laser Printer, and Motorola Smart Phone, Cordless operate at the most significant losses. We should consider this when evaluating our inventory and potentially adjusting our stock strategies.
 
