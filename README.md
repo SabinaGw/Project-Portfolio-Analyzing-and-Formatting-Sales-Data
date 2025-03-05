@@ -728,7 +728,8 @@ Finally, it's time to see it all in the Power BI dashboard.
 
 ## Data Visualization
 #### Tool: PowerBI
-Interactive dashboard in PowerBI based on collected data
+Below, I present a Power BI report I developed, showcasing the analysis of SuperStore data for the period 2011-2014.
+![PowerBI](./images/SuperStore.jpg)
 
 ## Recommendations
 
