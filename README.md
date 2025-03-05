@@ -728,8 +728,7 @@ Finally, it's time to see it all in the Power BI dashboard.
 
 ## Data Visualization
 #### Tool: PowerBI
-Let’s take another look at the Power BI report below, which showcases the analysis of SuperStore data for the period 2011-2014.
-
+Let’s take another look at the Power BI report below.
 
 ![PowerBI](./images/SuperStore.jpg)
 
