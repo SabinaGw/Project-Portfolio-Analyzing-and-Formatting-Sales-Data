@@ -11,7 +11,7 @@ The analysis will utilize a combination of Excel, SQL, and PowerBI, following a 
 * [Data Visualization](#data-visualization)
 * [Recommendations](#recommendations)
 
-![Dashboard](./ssgif.gif)
+![Dashboard](images/ssgif.gif)
   
 ## Defining the Problem
 #### Which products, locations, and customer segments should the company focus on and which should it avoid to maximize profits?
