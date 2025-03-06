@@ -11,7 +11,6 @@ The analysis will utilize a combination of Excel, SQL, and PowerBI, following a 
 * [Data Visualization](#data-visualization)
 * [Recommendations](#recommendations)
 
-![Watch the video](https://www.youtube.com/embed/Sr_ALmhpp8s)
 
   
 ## Defining the Problem
