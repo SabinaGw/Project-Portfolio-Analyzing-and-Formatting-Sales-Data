@@ -11,7 +11,10 @@ The analysis will utilize a combination of Excel, SQL, and PowerBI, following a 
 * [Data Visualization](#data-visualization)
 * [Recommendations](#recommendations)
 
-  [Obejrzyj wideo](./03-14-04.mp4)
+<video controls>
+   <source src="./03-14-04.mp4" type="video/mp4">
+   Twoja przeglądarka nie wspiera osadzonych filmów.
+</video>
 
 
   
